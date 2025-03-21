@@ -50,6 +50,7 @@ const Header = () => {
 
   const handleLogout = () => {
     logout();
+    navigator("/")
   };
 
   return (
@@ -95,12 +96,17 @@ const Header = () => {
                       Perfil
                     </Link>
                   </li>
-                  <li
+                  {user?.role[0] === "ADMIN" ? <li
                     onClick={toggleMenu}
                     className="list-none hover:shadow-xl w-full rounded-lg text-left pl-3"
                   >
-                    <Link to={"/user-config"}>Configuracion</Link>
-                  </li>
+                    <Link to={"/admin"}>Panel Administrador</Link>
+                  </li>  : <li
+                    onClick={toggleMenu}
+                    className="list-none hover:shadow-xl w-full rounded-lg text-left pl-3"
+                  >
+                    <Link to={"/use-config"}>Configuracion</Link>
+                  </li>}
                   <li
                     onClick={toggleMenu}
                     className="list-none hover:shadow-xl w-full rounded-lg text-left pl-3"
