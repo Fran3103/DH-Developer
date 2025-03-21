@@ -31,6 +31,7 @@ function App() {
             <Route path="/perfil" element={<Perfil />} />
             <Route path="/admin/*" element={<Admin />} >
               <Route path="productosAdmin" element={<ProductosAdmin />}/>
+              <Route index element={<ProductosAdmin />}/>
               <Route path="usuarios" element={<Usuarios />}/>
             </Route>
           </Routes>
