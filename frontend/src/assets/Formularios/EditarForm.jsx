@@ -40,6 +40,7 @@ const EditarForm = ({ cerrar, confirmar, datosEditar }) => {
       ...prevData,
       [name]: value,
     }));
+    
   };
 
   const handleFileChange = (e) => {
