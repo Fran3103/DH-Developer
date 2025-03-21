@@ -1,10 +1,13 @@
 import { NavegacionAdmin } from "../Components/NavegacionAdmin";
 import { Outlet } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import UserContext from "../Context/UseContext";
 
 const Admin = () => {
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const {user} = useContext(UserContext)
+  console.log(user)
   
   useEffect(() => {
       const handleResize = () => {
@@ -18,7 +21,7 @@ const Admin = () => {
         window.removeEventListener("resize", handleResize);
       };
     }, []);
-    if (isMobile) {
+    if (isMobile ) {
       return (
         <div className="flex justify-center items-center h-screen bg-celeste">
           <h1 className="text-white text-2xl">
@@ -27,6 +30,16 @@ const Admin = () => {
         </div>
       );
     }
+    if (user?.role?.[0] === "USER" ) {
+      return (
+        <div className="flex justify-center items-center h-screen bg-celeste">
+          <h1 className="text-white text-2xl">
+            Esta pagina solo está disponible para Administradores.
+          </h1>
+        </div>
+      );
+    }
+    else{
   return (
     <div className="m-auto w-full mt-[85px]   ">
         <div className="flex flex-1 ">
@@ -39,6 +52,6 @@ const Admin = () => {
       </div>
     
   );
-};
+}}
 
 export default Admin;
