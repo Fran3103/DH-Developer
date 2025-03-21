@@ -1,0 +1,39 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --primary-color:  #19A7CE ;
+  --second-color: #19a7ce8e;
+  --third-color: #073D56;
+  --text-color: #000000;
+  --accent-color:#ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  background-color: var(--accent-color);
+ 
+}
+
+
+
+
+
+
+
+
