@@ -1,39 +1,52 @@
 import { useState } from "react";
 import useFetch from "../Hooks/useFetchData";
 import { FaEdit, FaBan, FaCheckCircle } from "react-icons/fa";
-import { actualizarRol } from "../Hooks/useFetchDataEdit";
+
+import CambiaRol from "./CambiaRol";
 
 export const Usuarios = () => {
   const [paginaActual, setPaginaActual] = useState(1);
   const [editar, setEditar] = useState(true);
+  const [errorRol, setErrorRol] = useState(false);
   const [rol, setRol] = useState({
     id:"",
-    role:""
+    role:"",
+    name:""
   });
-
+  
+  const [cambiarRol, setCambiarRol] = useState(false)
   const [Update, setUpdate] = useState(false);
 
-  const handleChange = (e, userId) => {
+  const handleChange = (e, userId, userName) => {
     const { name, value } = e.target;
     setRol({
       id:userId,
-      [name]:value
+      [name]:value,
+      name:userName
       
     });
   };
 
-  const HandleSudmit = async () => {
-      if (!rol.id || !rol.role){
-        console.log("este es el id:", {rol}  )
-        alert("Selecciona un Rol para actualizar")
-        return
-      }
+  const handleClick = () => {
+    if (rol.role.length !== 0) {
+      setCambiarRol(!cambiarRol);
+    } else {
+      setErrorRol(true); // Muestra el modal de error
+    }
+  };
 
-      await actualizarRol(rol.id, rol.role)
-      setUpdate(!Update)
-      setEditar(true)
-    
+  const cerrar= ()=> {
+    setCambiarRol(false)
+    setUpdate((prev) => !prev);
+    setEditar(true)
+    setRol({
+      id:"",
+      role:"",
+      name:""
+    })
   }
+
+
  
  
 
@@ -93,7 +106,7 @@ export const Usuarios = () => {
                         name="role"
                         className={editar ? "w-2/3 border px-3 py-2 rounded cursor-not-allowed" : "w-2/3 border px-3 py-2 rounded cursor-pointer"}
                         disabled={editar}
-                        onChange={(e)=>handleChange(e, user.id)}
+                        onChange={(e)=>handleChange(e, user.id, user.name)}
                       >
                         <option value="">
                           {user?.role === "USER" ? "Usuario" : "Administrador"}
@@ -107,7 +120,7 @@ export const Usuarios = () => {
                         {editar ? (
                           <FaEdit
                             size={20}
-                            onClick={() => setEditar(!editar)}
+                            onClick={()=> setEditar(!editar)}
                             className=" cursor-pointer "
                             color="blue"
                           />
@@ -116,13 +129,13 @@ export const Usuarios = () => {
                             <FaBan
                               size={20}
                               color="red"
-                              onClick={() => setEditar(true)}
+                              onClick={cerrar}
                             />{" "}
                             <FaCheckCircle
                               size={20}
                               color="green"
                               className="cursor-pointer"
-                              onClick={HandleSudmit}
+                              onClick={handleClick}
                             />
                           </span>
                         )}
@@ -155,6 +168,36 @@ export const Usuarios = () => {
           </div>
         </div>
       </div>
+      {/* Modal de confirmacion de cambio de rol*/}
+      {cambiarRol && <CambiaRol 
+      rol={rol}
+      cerrar={cerrar}
+      confirmar={() => {
+              setEditar(true);
+              setUpdate((prev) => !prev);
+              setCambiarRol(!cambiarRol)
+              
+
+            }}/>
+            
+            
+            }
+
+            {/* Modal de Advertencia */}
+      {errorRol && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded shadow-md text-center w-full max-w-sm">
+            <h2 className="text-red-600 font-bold">Error</h2>
+            <p className="text-gray-700">Selecciona un rol para actualizar.</p>
+            <button
+              className="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition"
+              onClick={() => setErrorRol(false)}
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
