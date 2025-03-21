@@ -1,0 +1,563 @@
+[
+  {
+    "id": 1,
+    "name": "Lola Barracas",
+    "category": "Casas",
+    "location": "Barracas",
+    "address":"1539 Isabel la Católica, 1163 Buenos Aires, Argentina ",
+    "price": 50000.0,
+    "rating": 8,
+    "quality": "Excelente",
+    "description": "Lola Barracas Casa con Cochera está en Buenos Aires y dispone de alojamiento con wifi gratis a 5,2 km de Centro Cultural Kirchner, a 5,3 km de Plaza de Mayo y a 5,5 km de Café Tortoni. El alojamiento, que se encuentra a 2 km de Estadio La Bombonera, ofrece terraza y parking privado gratis. Esta casa o chalet tiene aire acondicionado y cuenta con 3 dormitorios, TV de pantalla plana por cable y cocina con nevera y microondas. Palacio Barolo está a 5,6 km del alojamiento, y Obelisco de Buenos Aires está a 6,1 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 11 km del alojamiento.",
+    "images": [
+      { "url": "/images/casa_1_1.jpg" },
+      { "url": "/images/casa_1_2.jpg" },
+      { "url": "/images/casa_1_3.jpg" },
+      { "url": "/images/casa_1_4.jpg" },
+      { "url": "/images/casa_1_5.jpg" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Great Loft Nunez",
+    "category": "Casas",
+    "location": "Nuñes",
+    "address":"Nuñez 2842, Nuñez, 1429 Buenos Aires, Argentina",
+    "price": 40000.0,
+    "rating": 7.4,
+    "quality": "Excelente",
+    "description": "Great Loft Nunez está en Buenos Aires, a 2,6 km de Estadio de River Plate y a 6,8 km de Bosques de Palermo, y ofrece alojamiento con equipamiento como wifi gratis y TV de pantalla plana. Esta casa o chalet se encuentra en un edificio de 2008 y está a 6,9 km de Lagos de Palermo y a 7 km de Parque El Rosedal. Esta casa o chalet con aire acondicionado consta de 1 dormitorio, una sala de estar, una cocina totalmente equipada con nevera y 1 baño con bidet y secador de pelo. Para mayor comodidad, el alojamiento puede ofrecer toallas y ropa de cama por un suplemento. La casa o chalet ofrece servicio de alquiler de bicicletas. Plaza Serrano está a 7,1 km del alojamiento, y Jardín Japonés, Buenos Aires está a 7,5 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 7 km del alojamiento, que ofrece servicio de traslado de pago para ir o volver del aeropuerto.",
+    "images": [
+      { "url": "/images/casa_2_1.jpg" },
+      { "url": "/images/casa_2_2.jpg" },
+      { "url": "/images/casa_2_3.jpg" },
+      { "url": "/images/casa_2_4.jpg" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Casa PalermoSoho",
+    "category": "Casas",
+    "location": "Palermo",
+    "address":"1864 Uriarte, Palermo, 1414 Buenos Aires, Argentina",
+    "price": 60000.0,
+    "rating": 10,
+    "quality": "Excelente",
+    "description": "Casa PalermoSoho Piscina Jardín Parrilla Terraza 3Pisos 5Dorm 4Baños, que cuenta con piscina al aire libre, jardín, salón de uso común y terraza, se encuentra en el barrio de Palermo, en Buenos Aires, a solo 6 min a pie de Plaza Serrano. Esta casa o chalet también dispone de piscina privada y wifi gratis. Esta casa o chalet con aire acondicionado se compone de 5 dormitorios independientes, una sala de estar, una cocina totalmente equipada con nevera y horno, y 4 baños. Hay toallas y ropa de cama en la casa o chalet. Jardín Japonés, Buenos Aires está a 3 km del alojamiento, y Bosques de Palermo está a 3,4 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 6 km del alojamiento.",
+    "images": [
+      { "url": "/images/casa_3_1.jpg" },
+      { "url": "/images/casa_3_2.jpg" },
+      { "url": "/images/casa_3_3.jpg" },
+      { "url": "/images/casa_3_4.jpg" },
+      { "url": "/images/casa_3_5.jpg" },
+      { "url": "/images/casa_3_6.jpg" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Casa Soho",
+    "category": "Casas",
+    "location": "Palermo",
+    "address": "4500 Honduras, Palermo, Buenos Aires",
+    "price": 50000.0,
+    "rating": 10,
+    "quality": "Excelente",
+    "description": "Casa Soho está a solo 7 min a pie de Plaza Serrano y ofrece alojamiento en Buenos Aires con bar y zona de barbacoa, además de recepción 24 horas. Esta casa o chalet dispone de parking privado gratis, salón de uso común y wifi gratis. La casa o chalet dispone de una terraza y vistas a la ciudad e incluye 4 dormitorios, sala de estar, TV de pantalla plana por cable, cocina equipada y 4 baños con bidet y ducha. Hay toallas y ropa de cama en la casa o chalet. Jardín Japonés, Buenos Aires está a 2,5 km del alojamiento, y Museo de Arte Latinoamericano de Buenos Aires (Malba) está a 3,4 km. El aeropuerto (Aeroparque Jorge Newbery) está a 5 km.",
+    "images": [
+      { "url": "/images/casa_4_1.jpg" },
+      { "url": "/images/casa_4_2.jpg" },
+      { "url": "/images/casa_4_3.jpg" },
+      { "url": "/images/casa_4_4.jpg" },
+      { "url": "/images/casa_4_5.jpg" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Palermo Hollywood ",
+    "category": "Departamentos",
+    "location": "Palermo",
+    "address":"Bonpland 2269 6B Palermo Hollywood, Palermo, C1431 Buenos Aires, Argentina",
+    "price": 50000.0,
+    "rating": 10,
+    "quality": "Bueno",
+    "description": "Palermo Hollywood Totalmente equipado temporal está en el barrio de Palermo, en Buenos Aires, a 18 min a pie de Plaza Serrano y a 2,6 km de Parque El Rosedal, y ofrece alojamiento equipado con balcón y wifi gratis. Este apartamento está a 2,7 km de Bosques de Palermo y a 2,7 km de Lagos de Palermo. Este apartamento con aire acondicionado consta de 1 dormitorio, una sala de estar, una cocina totalmente equipada con nevera y cafetera, y 1 baño con bidet y ducha. Para mayor comodidad, el alojamiento puede ofrecer toallas y ropa de cama por un suplemento. Jardín Japonés, Buenos Aires está a 2,8 km del alojamiento, y Museo de Arte Latinoamericano de Buenos Aires (Malba) está a 3,6 km. El aeropuerto (Aeroparque Jorge Newbery) está a 5 km.",
+    "images": [
+      { "url": "/images/departamento_1_1.jpg" },
+      { "url": "/images/departamento_1_2.jpg" },
+      { "url": "/images/departamento_1_3.jpg" },
+      { "url": "/images/departamento_1_4.jpg" },
+      { "url": "/images/departamento_1_5.jpg" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "En el corazón de la ciudad!",
+    "category": "Departamentos",
+    "location": "Monserrat",
+    "address":" 187 Bolívar, Monserrat, 1066 Buenos Aires, Argentina",
+    "price": 50000.0,
+    "rating": 10,
+    "quality": "Excelente",
+    "description": "En el corazón de la ciudad! es un alojamiento bien ubicado en el centro de Buenos Aires que ofrece balcón. Centro Cultural Kirchner y Plaza de Mayo están a 12 min a pie y a 300 metros del apartamento, y hay wifi gratis. Este apartamento tiene aire acondicionado y cuenta con 1 dormitorio, TV de pantalla plana y cocina con nevera y horno. Hay toallas y ropa de cama en el apartamento. Cerca del alojamiento hay puntos de interés como Café Tortoni, Palacio Barolo y Basilica del Santisimo Sacramento. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 7 km del alojamiento.",
+    "images": [
+      { "url": "/images/departamento_2_1.jpg" },
+      { "url": "/images/departamento_2_2.jpg" },
+      { "url": "/images/departamento_2_3.jpg" },
+      { "url": "/images/departamento_2_4.jpg" },
+      { "url": "/images/departamento_2_5.jpg" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Palermo Vibes",
+    "category": "Departamentos",
+    "location": "Palermo",
+    "address":"2386 Fray Justo Santa María de Oro, Palermo, 1425 Buenos Aires, Argentina",
+    "price": 50000.0,
+    "rating": 10,
+    "quality": "Excelente",
+    "description": "Palermo Vibes, que cuenta con vistas a la ciudad, ofrece alojamiento con balcón y hervidor a unos 14 min a pie de Plaza Serrano. El alojamiento está a 18 min a pie de Bosques de Palermo y dispone de wifi gratis en todo el alojamiento. Este apartamento con aire acondicionado consta de 1 dormitorio, una sala de estar, una cocina totalmente equipada con nevera y cafetera, y 1 baño con bidet y ducha. Hay toallas y ropa de cama en el apartamento. Cerca del alojamiento hay puntos de interés como Lagos de Palermo, Parque El Rosedal y Jardín Japonés, Buenos Aires. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 5 km del alojamiento.",
+    "images": [
+      { "url": "/images/departamento_3_1.jpg" },
+      { "url": "/images/departamento_3_2.jpg" },
+      { "url": "/images/departamento_3_3.jpg" },
+      { "url": "/images/departamento_3_4.jpg" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Estudio Deco Armani Recoleta",
+    "category": "Departamentos",
+    "location": "Recoleta",
+    "address":"1999 Guido, Recoleta, C1119AAC Buenos Aires, Argentina",
+    "price": 50000.0,
+    "rating": 10,
+    "quality": "Excelente",
+    "description": "Estudio Deco Armani Recoleta se encuentra en Buenos Aires, a 8 min a pie de Museo Nacional de Bellas Artes, y ofrece alojamiento con terraza, wifi gratis y recepción 24 horas. Este alojamiento con vistas al jardín dispone de balcón. Este apartamento tiene aire acondicionado y dispone de 1 dormitorio y 1 baño con bidet, ducha y secador de pelo. La cocina está equipada con nevera, microondas y minibar, además de cafetera y hervidor. En el apartamento, la clientela puede disfrutar de piscina cubierta, sauna y bañera de hidromasaje. Teatro Colón está a 1,7 km del alojamiento, y Museo de Arte Latinoamericano de Buenos Aires (Malba) está a 2 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 4 km del alojamiento.",
+    "images": [
+      { "url": "/images/departamento_4_1.jpg" },
+      { "url": "/images/departamento_4_2.jpg" },
+      { "url": "/images/departamento_4_3.jpg" },
+      { "url": "/images/departamento_4_4.jpg" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Rent Furnished",
+    "category": "Departamentos",
+    "location": "Recoleta",
+    "address":"1428 Ecuador, Recoleta, 1425 Buenos Aires, Argentina",
+    "price": 50000.0,
+    "rating": 10,
+    "quality": "Excelente",
+    "description": "Rent Furnished Apartment 1 Main Room Recoleta se encuentra en el barrio de Recoleta, en Buenos Aires, a 2,5 km de Teatro Colón y a 2,5 km de Museo de Arte Latinoamericano de Buenos Aires (Malba), y ofrece alojamiento equipado con balcón y wifi gratis. Este apartamento está a 1,7 km de Museo Nacional de Bellas Artes y a 2,7 km de Jardín Japonés, Buenos Aires. Este apartamento con aire acondicionado consta de 1 dormitorio, una sala de estar, una cocina totalmente equipada con horno y cafetera, y 1 baño con bidet y ducha. Hay toallas y ropa de cama en el apartamento. Obelisco de Buenos Aires está a 3 km del alojamiento, y Basilica del Santisimo Sacramento está a 3,6 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 5 km.",
+    "images": [
+      { "url": "/images/departamento_5_1.jpg" },
+      { "url": "/images/departamento_5_2.jpg" },
+      { "url": "/images/departamento_5_3.jpg" },
+      { "url": "/images/departamento_5_4.jpg" },
+      { "url": "/images/departamento_5_5.jpg" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "UNDICI Republica de la Boca",
+    "category": "Hoteles",
+    "location": "La Boca ",
+    "address":"923 Brandsen, La Boca, 1161 Buenos Aires, Argentina",
+    "price": 50000.0,
+    "rating": 10,
+    "quality": "Excelente",
+    "description": "UNDICI Republica de la Boca By OWN está en Buenos Aires, a 3 min a pie de Estadio La Bombonera, y dispone de alojamiento con piscina al aire libre, parking privado, terraza y bar. Este hotel de 4 estrellas ofrece servicio de conserjería y mostrador de información turística. El alojamiento ofrece recepción 24 horas, traslado para ir o volver del aeropuerto, servicio de habitaciones y wifi gratis en todo el alojamiento. El hotel ofrece habitaciones con aire acondicionado, escritorio, hervidor, caja fuerte, TV de pantalla plana y baño privado con bidet. En UNDICI Republica de la Boca By OWN, cada habitación cuenta con ropa de cama y toallas. El desayuno diario ofrece opciones buffet, americanas o vegetarianas. En el alojamiento, la clientela puede disfrutar de centro de spa. Centro Cultural Kirchner está a 4,3 km del alojamiento, y Plaza de Mayo está a 4,4 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 10 km.",
+    "images": [
+      { "url": "/images/hotel_1_1.jpg" },
+      { "url": "/images/hotel_1_2.jpg" },
+      { "url": "/images/hotel_1_3.jpg" },
+      { "url": "/images/hotel_1_4.jpg" },
+      { "url": "/images/hotel_1_5.jpg" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Hotel Santa Cruz",
+    "category": "Hoteles",
+    "location": "Flores",
+    "address":"2858 Bogotá 2858, Flores, 1406 Buenos Aires, Argentina",
+    "price": 50000.0,
+    "rating": 10,
+    "quality": "Excelente",
+    "description": "Hotel Santa Cruz se encuentra en Buenos Aires, a 6,4 km de Plaza Arenales, y ofrece habitaciones con aire acondicionado y salón de uso común. El alojamiento está a unos 6,9 km de Plaza Serrano, a 9,4 km de Bosques de Palermo y a 9,4 km de Lagos de Palermo. Hay wifi gratis y se ofrece parking privado por un suplemento. Todas las unidades de este alojamiento están equipadas con TV de pantalla plana. En el hotel, todas las habitaciones disponen de baño privado con bidet. La recepción ofrece ayuda de forma ininterrumpida. Parque El Rosedal está a 10 km del alojamiento, y Jardín Japonés, Buenos Aires está a 10 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 12 km.",
+    "images": [
+      { "url": "/images/hotel_2_1.jpg" },
+      { "url": "/images/hotel_2_2.jpg" },
+      { "url": "/images/hotel_2_3.jpg" },
+      { "url": "/images/hotel_2_4.jpg" },
+      { "url": "/images/hotel_2_5.jpg" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "We The People Palermo Hollywood",
+    "category": "Hoteles",
+    "location": "Palermo",
+    "address":" Soler 5975, Palermo, 1425 Buenos Aires, Argentina",
+    "price": 50000.0,
+    "rating": 10,
+    "quality": "Excelente",
+    "description": "We The People Palermo Hollywood se encuentra a 1,7 km de Plaza Serrano y ofrece alojamiento conpiscina de temporada al aire libre, terraza y cocina compartida. Se ofrece wifi gratis en todo el alojamiento. Las unidades están equipadas con balcón y ofrecen aire acondicionado, TV de pantalla plana y baño privado con bidet y artículos de aseo gratuitos. En el apartahotel se sirve todos los días un desayuno continental. En We The People Palermo Hollywood, la clientela puede disfrutar de sauna. Bosques de Palermo está a 3,2 km del alojamiento, y Lagos de Palermo está a 3,2 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 7 km del alojamiento.",
+    "images": [
+      { "url": "/images/hotel_3_1.jpg" },
+      { "url": "/images/hotel_3_2.jpg" },
+      { "url": "/images/hotel_3_3.jpg" },
+      { "url": "/images/hotel_3_4.jpg" },
+      { "url": "/images/hotel_3_5.jpg" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Up América Plaza",
+    "category": "Hoteles",
+    "location": "Balvanera",
+    "address":"Bartolome Mitre, 1744, C1037ABH Buenos Aires, Argentina ",
+    "price": 50000.0,
+    "rating": 10,
+    "quality": "Excelente",
+    "description": "El America Plaza ofrece habitaciones elegantes en Buenos Aires, a 2 minutos a pie del impresionante edificio del Congreso y a 300 metros de la concurrida avenida Corrientes. Las habitaciones del Up América Plaza están equipadas con aire acondicionado, calefacción y TV inteligente. El America Plaza se encuentra a solo 1,1 km del famoso Teatro de la Ópera Colón. La estación de metro Callao está a 300 metros y la estación de metro Congreso, a 150 metros. En las inmediaciones hay numerosas cafeterías, tiendas, restaurantes y librerías. El hotel proporciona WiFi gratuita. El aeropuerto Jorge Newbery se halla a 6 km. Se facilita aparcamiento público por un suplemento.",
+    "images": [
+      { "url": "/images/hotel_4_1.jpg" },
+      { "url": "/images/hotel_4_2.jpg" },
+      { "url": "/images/hotel_4_3.jpg" },
+      { "url": "/images/hotel_4_4.jpg" },
+      { "url": "/images/hotel_4_5.jpg" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Hotel 6 de Octubre",
+    "category": "Hoteles",
+    "location": "Balvanera",
+    "address":"2854 Avenida Independencia, Balvanera, 1225 Buenos Aires, Argentina",
+    "price": 48000.0,
+    "rating": 9.5,
+    "quality": "Muy Bueno",
+    "description": "Hotel 6 de Octubre se encuentra en Buenos Aires, a 3,7 km de Palacio Barolo, y ofrece servicio de conserjería, habitaciones libres de humo, centro de fitness, wifi gratis en todo el alojamiento y salón de uso común. Este alojamiento, que cuenta con habitaciones familiares, también ofrece zona de juegos infantil. El alojamiento dispone de club infantil, servicio de habitaciones y servicio de organización de tours. En el hotel, las habitaciones cuentan con escritorio. Las habitaciones del alojamiento tienen baño privado con bidet y artículos de aseo gratuitos, además de TV de pantalla plana y aire acondicionado. Algunas habitaciones también tienen balcón. En Hotel 6 de Octubre, todas las habitaciones están equipadas con ropa de cama y toallas. En el alojamiento se puede disfrutar de un desayuno buffet, continental o vegetariano. Puedes jugar al ping-pong en el alojamiento. El personal de la recepción 24 horas habla inglés, español y portugués, y estará encantado de ayudar. Café Tortoni está a 4,1 km del alojamiento, y Obelisco de Buenos Aires está a 4,6 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 8 km del alojamiento, que ofrece servicio de traslado de pago para ir o volver del aeropuerto.",
+    "images": [
+      { "url": "/images/hotel_5_1.jpg" },
+      { "url": "/images/hotel_5_2.jpg" },
+      { "url": "/images/hotel_5_3.jpg" },
+      { "url": "/images/hotel_5_4.jpg" },
+      { "url": "/images/hotel_5_5.jpg" }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Casa Boutique ",
+    "category": "Casas",
+    "location": "San Justo",
+    "address":"Venezuela 2744, B1754JSN, 1754 Buenos Aires, Argentina ",
+    "price": 62000.0,
+    "rating": 9.0,
+    "quality": "Excelente",
+    "description": "Casa Boutique Buenos Aires, Desayuno y Traslado Gratis Aeropuerto Ezeiza está en Buenos Aires, a 13 km de Plaza Arenales, y dispone de alojamiento con jardín, wifi gratis, servicio de traslado gratuito y servicio de habitaciones. Esta casa o chalet ofrece terraza, además de casino. Esta casa o chalet con aire acondicionado consta de 2 dormitorios, una sala de estar, una cocina totalmente equipada con nevera y cafetera, y 1 baño con ducha y bañera de hidromasaje. Hay toallas y ropa de cama en la casa o chalet. En el alojamiento se puede disfrutar de un desayuno continental, vegetariano o vegano. En la recepción 24 horas se hablan varios idiomas, como inglés, español y italiano. Plaza Serrano está a 18 km del alojamiento, y Bosques de Palermo está a 20 km.",
+    "images": [
+      { "url": "/images/casa_5_1.jpg" },
+      { "url": "/images/casa_5_2.jpg" },
+      { "url": "/images/casa_5_3.jpg" },
+      { "url": "/images/casa_5_4.jpg" },
+      { "url": "/images/casa_5_5.jpg" }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Casa La Reserva",
+    "category": "Casas",
+    "location": "Palermo",
+    "address": " HERNAN CERIANE CERNADAS, 1746 Buenos Aires, Argentina",
+    "price": 70000.0,
+    "rating": 9.8,
+    "quality": "Excelente",
+    "description": "Casa La Reserva- Retiro de lujo Casa moderna con jardin y piscina en Pilar, que cuenta con jardín y terraza, ofrece alojamiento en Buenos Aires con wifi gratis y vistas al jardín. Parque de la Costa está a 49 km de la casa o chalet. Esta casa o chalet con aire acondicionado se compone de 4 dormitorios independientes, una cocina totalmente equipada con nevera y lavavajillas, y 5 baños. Se ofrece TV. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 64 km del alojamiento.",
+    "images": [
+      { "url": "/images/casa_6_1.jpg" },
+      { "url": "/images/casa_6_2.jpg" },
+      { "url": "/images/casa_6_3.jpg" },
+      { "url": "/images/casa_6_4.jpg" },
+      { "url": "/images/casa_6_5.jpg" }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "SomosHost ",
+    "category": "Casas",
+    "location": "Palermo",
+    "address":"Ángel Justiniano Carranza 1546, Palermo, 1414 Buenos Aires, Argentina",
+    "price": 55000.0,
+    "rating": 8.5,
+    "quality": "Muy Bueno",
+    "description": "SomosHost Hermosa casa con gran Terraza en Palermo Hollywood se encuentra en el barrio de Palermo, en Buenos Aires, cerca de Plaza Serrano. Dispone de wifi gratis y lavadora. Esta casa o chalet está a 3,8 km de Bosques de Palermo y a 3,8 km de Lagos de Palermo. Esta casa o chalet tiene aire acondicionado y cuenta con 3 dormitorios, TV de pantalla plana y cocina con nevera y horno. Hay toallas y ropa de cama en la casa o chalet. Parque El Rosedal está a 4 km del alojamiento, y Jardín Japonés, Buenos Aires está a 4,4 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 7 km del alojamiento.",
+    "images": [
+      { "url": "/images/casa_7_1.jpg" },
+      { "url": "/images/casa_7_2.jpg" },
+      { "url": "/images/casa_7_3.jpg" },
+      { "url": "/images/casa_7_4.jpg" }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Casa Grande",
+    "category": "Casas",
+    "location": "Palermo",
+    "address": " Costa Rica 4417, Palermo, 1414 Buenos Aires, Argentina",
+    "price": 63000.0,
+    "rating": 9.2,
+    "quality": "Excelente",
+    "description": "Casa grande en Palermo Soho ofrece terraza y wifi gratis, y se encuentra en el barrio de Palermo, en Buenos Aires, a 9 min a pie de Plaza Serrano. Esta casa o chalet ofrece alojamiento con balcón. Esta casa o chalet con aire acondicionado consta de 4 dormitorios, una sala de estar, una cocina totalmente equipada con nevera y hervidor, y 4 baños con ducha y artículos de aseo gratuitos. Hay toallas y ropa de cama en la casa o chalet. Jardín Japonés, Buenos Aires está a 2,2 km del alojamiento, y Museo de Arte Latinoamericano de Buenos Aires (Malba) está a 3,1 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 4 km del alojamiento.",
+    "images": [
+      { "url": "/images/casa_8_1.jpg" },
+      { "url": "/images/casa_8_2.jpg" },
+      { "url": "/images/casa_8_3.jpg" },
+      { "url": "/images/casa_8_4.jpg" }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Fliphaus",
+    "category": "Casas",
+    "location": "Palermo",
+    "address":"Armenia 1277, Palermo, 1414 Buenos Aires, Argentina",
+    "price": 68000.0,
+    "rating": 9.6,
+    "quality": "Excelente",
+    "description": "Fliphaus Armenia 1200 - 3 Bd Pool & Bbq Palermo está en Buenos Aires, a 13 min a pie de Plaza Serrano y a 2,9 km de Bosques de Palermo, y ofrece alojamiento con wifi gratis, aire acondicionado y terraza. Esta casa o chalet también tiene piscina privada. La casa o chalet dispone de TV. La casa o chalet también cuenta con una cocina bien equipada con nevera, horno y microondas, y también hay secador de pelo. Lagos de Palermo está a 2,9 km del alojamiento, y Parque El Rosedal está a 3,1 km. El aeropuerto (Aeroparque Jorge Newbery) está a 6 km.",
+    "images": [
+      { "url": "/images/casa_9_1.jpg" },
+      { "url": "/images/casa_9_2.jpg" },
+      { "url": "/images/casa_9_3.jpg" },
+      { "url": "/images/casa_9_4.jpg" },
+      { "url": "/images/casa_9_5.jpg" }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Lux 3 Bd Palermo H",
+    "category": "Casas",
+    "location": "Palermo",
+    "address":"Honduras 5766, Palermo, 1414 Buenos Aires, Argentina",
+    "price": 64000.0,
+    "rating": 9.4,
+    "quality": "Excelente",
+    "description": "Fliphaus Honduras 5750 - Lux 3 Bd Palermo H se encuentra en el barrio de Palermo, en Buenos Aires, y ofrece alojamiento con piscina privada y wifi gratis. Esta casa o chalet ofrece alojamiento con patio. Esta casa o chalet tiene aire acondicionado y cuenta con 3 dormitorios, TV por cable y cocina con nevera y horno. Hay toallas y ropa de cama en la casa o chalet. Plaza Serrano está a 11 min a pie del alojamiento, y Bosques de Palermo está a 3,5 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 7 km.",
+    "images": [
+      { "url": "/images/casa_10_1.jpg" },
+      { "url": "/images/casa_10_2.jpg" },
+      { "url": "/images/casa_10_3.jpg" },
+      { "url": "/images/casa_10_4.jpg" }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Curio Collection by Hilton",
+    "category": "Hoteles",
+    "location": "San Telmo",
+    "address":" Anselmo Aieta 1069, San Telmo, C1103AAA Buenos Aires, Argentina",
+    "price": 52000.0,
+    "rating": 9.3,
+    "quality": "Muy Bueno",
+    "description": "El Anselmo Buenos Aires, Curio Collection by Hilton, situado en Buenos Aires, a 500 metros de la Avenida 9 de Julio y a 1 km de la Casa Rosada, ofrece alojamiento cómodo, servicios excelentes y conexión WiFi gratuita en todas sus instalaciones. Todas las habitaciones disponen de TV de pantalla plana y baño privado. Todos los alojamientos incluyen desayuno continental diario. Durante la estancia en el establecimiento, se puede disfrutar de bebidas y aperitivos en un moderno e histórico ambiente. En el salón compartido del Anselmo Buenos Aires se sirven comidas elaboradas con productos frescos de la zona. La cafetería Anselmo del hotel presenta una decoración de estilo moderno y sirve cocina argentina y platos nutritivos. El hotel tiene instalaciones de fitness, sala de reuniones con servicio telefónico business y consigna de equipaje. El hotel se encuentra a 29 km de Tigre, a 6 km del aeroparque Jorge Newbery y a 32 km del aeropuerto de Ezeiza.",
+    "images": [
+      { "url": "/images/hotel_6_1.jpg" },
+      { "url": "/images/hotel_6_2.jpg" },
+      { "url": "/images/hotel_6_3.jpg" },
+      { "url": "/images/hotel_6_4.jpg" },
+      { "url": "/images/hotel_6_5.jpg" }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "M Concept Hotel",
+    "category": "Hoteles",
+    "location": "Monserrat",
+    "address":"Moreno 606, Monserrat, 1091 Buenos Aires, Argentina",
+    "price": 53000.0,
+    "rating": 9.6,
+    "quality": "Excelente",
+    "description": "El M Concept Hotel se encuentra en el corazón de Buenos Aires, a solo 300 metros de la plaza de Mayo, la Casa Rosada y el casco histórico de Buenos Aires. Cuenta con una ubicación excelente, a solo 3 manzanas de la mayoría de metros y otros medios de transporte público de la ciudad. Las elegantes y modernas habitaciones cuentan con baño privado, aire acondicionado con bomba de calor, wifi de alta velocidad, TV LED por cable, caja fuerte y minibar. El servicio de recepción está disponible las 24 horas del día. Además, los huéspedes pueden disfrutar del exquisito desayuno buffet de 07:00 a 11:00. El M Concept Hotel está a 1 km del Obelisco, a 1,3 km del Teatro Colón, a 400m de la avenida 9 de Julio y a 20 km del aeropuerto internacional Ministro Pistarini. Las reservas de más de 9 habitaciones se consideran reservas de grupo, por lo que el hotel puede solicitar el correspondiente pago por adelantado y aplicar condiciones especiales sobre la cancelación de la reserva o al hecho de no presentarse en el establecimiento.",
+    "images": [
+      { "url": "/images/hotel_7_1.jpg" },
+      { "url": "/images/hotel_7_2.jpg" },
+      { "url": "/images/hotel_7_3.jpg" },
+      { "url": "/images/hotel_7_4.jpg" },
+      { "url": "/images/hotel_7_5.jpg" }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Cyan Recoleta Hotel",
+    "category": "Hoteles",
+    "location": "Recoleta",
+    "address":"Junin 1743, Recoleta, C1113AAR Buenos Aires, Argentina",
+    "price": 55000.0,
+    "rating": 9.8,
+    "quality": "Excelente",
+    "description": "El Cyan Recoleta Hotel está ubicado en el centro del exclusivo barrio de Recoleta, justo enfrente del cementerio, y ofrece habitaciones elegantes con TV de plasma y desayuno. Se halla a 1 km del Museo Nacional de Bellas Artes. Las habitaciones del Cyan Recoleta Hotel presentan una decoración sobria en tonos suaves y disponen de suelo de baldosa y ventanales. Todos los alojamientos están equipados con aire acondicionado. Los restaurantes y los bares animados del barrio de Recoleta están muy cerca. Se encuentra a 6,2 km del aeropuerto nacional Jorge Newbery. El aeropuerto internacional de Ezeiza queda a 32 km. El Cyan Recoleta está a 1,8 km del teatro de la ópera Colón. Hay aparcamiento privado de pago en las inmediaciones.",
+    "images": [
+      { "url": "/images/hotel_8_1.jpg" },
+      { "url": "/images/hotel_8_2.jpg" },
+      { "url": "/images/hotel_8_3.jpg" },
+      { "url": "/images/hotel_8_4.jpg" },
+      { "url": "/images/hotel_8_5.jpg" }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Live Soho Boutique",
+    "category": "Hoteles",
+    "location": "Palermo",
+    "address":"4470 Charcas, Palermo, 1425 Buenos Aires, Argentina",
+    "price": 56000.0,
+    "rating": 9.5,
+    "quality": "Excelente",
+    "description": "Live Soho Boutique & Apartments Palermo Soho II se encuentra en Buenos Aires, a 12 min a pie de Plaza Serrano y a 1,8 km de Bosques de Palermo, y ofrece alojamiento con wifi gratis, aire acondicionado, terraza y zona de barbacoa. El apartamento ofrece balcón, vistas a la ciudad, zona de estar, TV de pantalla plana por cable, cocina totalmente equipada con nevera y horno, y baño privado con bidet y artículos de aseo gratuitos. También se ofrece microondas, fogones y tostadora, además de cafetera y hervidor. Se puede practicar ciclismo en los alrededores. Cerca del alojamiento hay puntos de interés como Lagos de Palermo, Jardín Japonés, Buenos Aires y Parque El Rosedal. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 5 km del alojamiento.",
+    "images": [
+      { "url": "/images/hotel_9_1.jpg" },
+      { "url": "/images/hotel_9_2.jpg" },
+      { "url": "/images/hotel_9_3.jpg" },
+      { "url": "/images/hotel_9_4.jpg" },
+      { "url": "/images/hotel_9_5.jpg" }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Hotel Goya BA",
+    "category": "Hoteles",
+    "location": "CABA",
+    "address":" Suipacha 750, 1008 Buenos Aires, Argentina",
+    "price": 57000.0,
+    "rating": 9.7,
+    "quality": "Excelente",
+    "description": "Hotel Goya BA se encuentra en el centro de Buenos Aires, a 8 min a pie de Obelisco de Buenos Aires y a 400 metros de Teatro Colón. Este hotel de 2 estrellas ofrece terraza y habitaciones con aire acondicionado, wifi gratis y baño privado. El alojamiento ofrece servicio de habitaciones, recepción 24 horas y cambio de moneda. En el hotel, todas las habitaciones tienen armario y TV de pantalla plana. En Hotel Goya BA, cada habitación está equipada con ropa de cama y toallas. Cerca del alojamiento hay puntos de interés como Basilica del Santisimo Sacramento, Palacio Barolo y Café Tortoni. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 5 km del alojamiento.",
+    "images": [
+      { "url": "/images/hotel_10_1.jpg" },
+      { "url": "/images/hotel_10_2.jpg" },
+      { "url": "/images/hotel_10_3.jpg" },
+      { "url": "/images/hotel_10_4.jpg" },
+      { "url": "/images/hotel_10_5.jpg" }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Top Rentals Deheza",
+    "category": "Departamentos",
+    "location": "Nuñez",
+    "address":"1640 Deheza, Nuñez, 1429 Buenos Aires, Argentina",
+    "price": 58000.0,
+    "rating": 9.2,
+    "quality": "Muy Bueno",
+    "description": "Top Rentals Deheza está a 2,5 km de Estadio de River Plate y ofrece alojamiento con aire acondicionado, balcón y wifi gratis. El alojamiento está equipado con TV de pantalla plana y baño privado con bidet, ducha y secador de pelo. La cocina tiene horno, microondas y tostadora. En el apartamento se sirve todas las mañanas un desayuno continental. Parque El Rosedal está a 7,5 km del alojamiento, y Lagos de Palermo está a 7,5 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 7 km.",
+    "images": [
+      { "url": "/images/departamento_6_1.jpg" },
+      { "url": "/images/departamento_6_2.jpg" },
+      { "url": "/images/departamento_6_3.jpg" },
+      { "url": "/images/departamento_6_4.jpg" },
+      { "url": "/images/departamento_6_5.jpg" }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Nuñez PH Premium",
+    "category": "Departamentos",
+    "location": "Nuñez",
+    "address":"2956 Amenábar Departamento C, Nuñez, 1428 Buenos Aires, Argentina",
+    "price": 59000.0,
+    "rating": 9.4,
+    "quality": "Excelente",
+    "description": "Nuñez PH Premium Parrilla!, que tiene vistas al jardín, dispone de alojamiento con terraza y balcón a unos 2,2 km de Estadio de River Plate. Este apartamento ofrece alojamiento con patio y wifi gratis. Este apartamento con aire acondicionado consta de 2 dormitorios, una sala de estar, una cocina totalmente equipada con nevera y cafetera, y 2 baños con bidet y ducha. Para mayor comodidad, el alojamiento puede ofrecer toallas y ropa de cama por un suplemento. Bosques de Palermo está a 6 km del alojamiento, y Lagos de Palermo está a 6,1 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 7 km.",
+    "images": [
+      { "url": "/images/departamento_7_1.jpg" },
+      { "url": "/images/departamento_7_2.jpg" },
+      { "url": "/images/departamento_7_3.jpg" },
+      { "url": "/images/departamento_7_4.jpg" },
+      { "url": "/images/departamento_7_5.jpg" },
+      { "url": "/images/departamento_11_1.jpg" },
+      { "url": "/images/departamento_11_2.jpg" },
+      { "url": "/images/departamento_11_3.jpg" },
+      { "url": "/images/departamento_11_4.jpg" },
+      { "url": "/images/departamento_11_5.jpg" }
+    ]
+  },
+  {
+    "id": 28,
+    "name": " Modern Flat",
+    "category": "Departamentos",
+    "location": "Nuñez",
+    "address":"2830 Montañeses Apartemento 1, Nuñez, 1429 Buenos Aires, Argentina",
+    "price": 60000.0,
+    "rating": 9.6,
+    "quality": "Excelente",
+    "description": "Montañeses 2830 Modern Flat está en Buenos Aires, a solo 10 min a pie de Estadio de River Plate, y dispone de alojamiento con piscina de temporada al aire libre, centro de fitness, terraza y wifi gratis. El apartamento ofrece parking privado y está a 4,9 km de Parque El Rosedal. Este apartamento con aire acondicionado consta de 1 dormitorio, una sala de estar, una cocina totalmente equipada con nevera y cafetera, y 1 baño con bidet y ducha. Hay TV de pantalla plana con canales por cable. Bosques de Palermo está a 5 km del alojamiento, y Lagos de Palermo está a 5 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 5 km.",
+    "images": [
+      { "url": "/images/departamento_8_1.jpg" },
+      { "url": "/images/departamento_8_2.jpg" },
+      { "url": "/images/departamento_8_3.jpg" },
+      { "url": "/images/departamento_8_4.jpg" },
+      { "url": "/images/departamento_8_5.jpg" }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Ibera apartment",
+    "category": "Departamentos",
+    "location": "Nuñez",
+    "address":"Iberá, Nuñez, 1429 Buenos Aires, Argentina",
+    "price": 61000.0,
+    "rating": 9.7,
+    "quality": "Excelente",
+    "description": "Ibera apartment se encuentra en el barrio de Núñez, en Buenos Aires, cerca de Estadio de River Plate. Dispone de terraza, wifi gratis y lavadora. Este apartamento tiene acceso a un balcón. Este apartamento tiene aire acondicionado y cuenta con 1 dormitorio, TV de pantalla plana y cocina con nevera y horno. Hay toallas y ropa de cama en el apartamento. El apartamento ofrece servicio de alquiler de bicicletas. Parque El Rosedal está a 5,7 km del alojamiento, y Bosques de Palermo está a 5,9 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 6 km del alojamiento.",
+    "images": [
+      { "url": "/images/departamento_9_1.jpg" },
+      { "url": "/images/departamento_9_2.jpg" },
+      { "url": "/images/departamento_9_3.jpg" },
+      { "url": "/images/departamento_9_4.jpg" },
+      { "url": "/images/departamento_9_5.jpg" }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Hermoso departamento ",
+    "category": "Departamentos",
+    "location": "Nuñez",
+    "address":" 3355 Avenida Cabildo 6b, Nuñez, 1429 Buenos Aires, Argentina",
+    "price": 62000.0,
+    "rating": 9.5,
+    "quality": "Excelente",
+    "description": "Hermoso departamento sobre Cabildo y contrafrente se encuentra en el barrio de Núñez, en Buenos Aires, a 1,9 km de Estadio de River Plate y a 6,3 km de Parque El Rosedal, y ofrece alojamiento equipado con balcón y wifi gratis. Este apartamento está a 6,4 km de Bosques de Palermo y a 6,5 km de Lagos de Palermo. Este apartamento con aire acondicionado se compone de 1 dormitorio independiente, una sala de estar, una cocina totalmente equipada con nevera y horno, y 1 baño. Hay toallas y ropa de cama en el apartamento. Jardín Japonés, Buenos Aires está a 6,7 km del alojamiento, y Plaza Serrano está a 7,4 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 6 km del alojamiento.",
+    "images": [
+      { "url": "/images/departamento_10_1.jpg" },
+      { "url": "/images/departamento_10_2.jpg" },
+      { "url": "/images/departamento_10_3.jpg" },
+      { "url": "/images/departamento_10_4.jpg" },
+      { "url": "/images/departamento_10_5.jpg" }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Hermoso Departamento",
+    "category": "Departamentos",
+    "location": "Palermo",
+    "address":" 1224 Gascón, Palermo, 1181 Buenos Aires, Argentina",
+    "price": 62000.0,
+    "rating": 9.5,
+    "quality": "Excelente",
+    "description": "Hermoso Departamento en Palermo! se encuentra en el barrio de Palermo, en Buenos Aires, a 2,7 km de Jardín Japonés, Buenos Aires, a 3,7 km de Museo de Arte Latinoamericano de Buenos Aires (Malba) y a 3,8 km de Bosques de Palermo. El alojamiento está a 13 min a pie de Plaza Serrano y dispone de wifi gratis en todo el alojamiento. Este apartamento tiene aire acondicionado y cuenta con 1 dormitorio, TV de pantalla plana y cocina con nevera y fogones. Hay toallas y ropa de cama en el apartamento. Parque El Rosedal está a 3,8 km del alojamiento, y Lagos de Palermo está a 3,8 km. El aeropuerto más cercano (Aeroparque Jorge Newbery) está a 5 km del alojamiento.",
+    "images": [
+      { "url": "/images/departamento_11_1.jpg" },
+      { "url": "/images/departamento_11_2.jpg" },
+      { "url": "/images/departamento_11_3.jpg" },
+      { "url": "/images/departamento_11_4.jpg" },
+      { "url": "/images/departamento_11_5.jpg" }
+    ]
+  }
+
+
+
+]

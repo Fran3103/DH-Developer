@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Franco",
+    "lastName": "Aguirre",
+    "email": "fn.aguirre@hotmail.com",
+    "password": "Fran2020!",
+    "role": "ADMIN"
+  },
+  {
+    "id": 2,
+    "name": "Thomas",
+    "lastName": "Mendez",
+    "email": "nagu2403@gmail.com",
+    "password": "Fran2020!",
+    "role": "ADMIN"
+  },
+  {
+    "id": 3,
+    "name": "Nahuel",
+    "lastName": "Aguirre",
+    "email": "nagu03@gmail.com",
+    "password": "Fran2020!",
+    "role": "USER"
+  },
+  {
+    "id": 4,
+    "name": "Francisco",
+    "lastName": "Aguilar",
+    "email": "francisco@hotmail.com",
+    "password": "Fran2020!",
+    "role": "USER"
+  },
+  {
+    "id": 5,
+    "name": "Nahuel",
+    "lastName": "Medina",
+    "email": "naguMedina@gmail.com",
+    "password": "Fran2020!",
+    "role": "USER"
+  },
+  {
+    "id": 6,
+    "name": "Nahir",
+    "lastName": "Perez",
+    "email": "Perez@gmail.com",
+    "password": "Fran2020!",
+    "role": "USER"
+  },
+  {
+  "id": 7,
+  "name": "Paola",
+  "lastName": "Cazares",
+  "email": "Paola@hotmail.com",
+  "password": "Fran2020!",
+  "role": "USER"
+  },
+  {
+    "id": 8,
+    "name": "Veronica",
+    "lastName": "Pomelo",
+    "email": "Veronica@gmail.com",
+    "password": "Fran2020!",
+    "role": "USER"
+  },
+  {
+    "id": 9,
+    "name": "Leonardo",
+    "lastName": "Aguero",
+    "email": "Leonard@gmail.com",
+    "password": "Fran2020!",
+    "role": "USER"
+  },
+  {
+    "id": 10,
+    "name": "Camila",
+    "lastName": "Parter",
+    "email": "Parter@hotmail.com",
+    "password": "Fran2020!",
+    "role": "USER"
+  },
+  {
+    "id": 11,
+    "name": "Nicolas",
+    "lastName": "Sosa",
+    "email": "nico@gmail.com",
+    "password": "Fran2020!",
+    "role": "USER"
+  },
+  {
+    "id": 12,
+    "name": "Belen",
+    "lastName": "Viera",
+    "email": "Belen@gmail.com",
+    "password": "Fran2020!",
+    "role": "USER"
+  }
+]

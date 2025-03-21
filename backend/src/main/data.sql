@@ -1,0 +1,19 @@
+
+INSERT INTO producto (name, category, location, price, rating, quality, image)
+VALUES ('Casa en Alquiler', 'Casa', 'Martinez', 153200, 7, 'Buena', 'static/images/casas/1_1.jpg');
+INSERT INTO producto (name, category, location, price, rating, quality, image)
+VALUES ('Casa en Alquiler', 'Casa', 'Martinez', 153200, 7, 'Buena', 'src/main/resources/static/images/casas/1_1.jpg');
+INSERT INTO producto (name, category, location, price, rating, quality, image)
+VALUES ('Casa en Alquiler', 'Casa', 'Martinez', 153200, 7, 'Buena', '1_1.jpg');
+INSERT INTO producto (name, category, location, price, rating, quality, image)
+VALUES ('Casa en Alquiler', 'Casa', 'Martinez', 153200, 7, 'Buena', 'images/casas/1_1.jpg');
+INSERT INTO producto (name, category, location, price, rating, quality, image)
+VALUES ('Casa en Alquiler', 'Casa', 'Martinez', 153200, 7, 'Buena', 'bv');
+INSERT INTO producto (name, category, location, price, rating, quality, image)
+VALUES ('Casa en Alquiler', 'Casa', 'Martinez', 153200, 7, 'Buena', 'bv');
+INSERT INTO producto (name, category, location, price, rating, quality, image)
+VALUES ('Casa en Alquiler', 'Casa', 'Martinez', 153200, 7, 'Buena', 'bv');
+INSERT INTO producto (name, category, location, price, rating, quality, image)
+VALUES ('Casa en Alquiler', 'Casa', 'Martinez', 153200, 7, 'Buena', 'bv');
+INSERT INTO producto (name, category, location, price, rating, quality, image)
+VALUES ('Casa en Alquiler', 'Casa', 'Martinez', 153200, 7, 'Buena', 'bv');
