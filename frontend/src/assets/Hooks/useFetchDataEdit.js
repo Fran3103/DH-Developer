@@ -20,12 +20,11 @@ export const actualizarRol = async (id, rol) => {
 
     console.log("Exito: ", data)
 
-    alert("Rol actualizado correctamente")
     }
 
     catch (error){
         console.error("Error: ", error)
-        alert("No se pudo actualizar el rol")
+        
     }
 
 }
