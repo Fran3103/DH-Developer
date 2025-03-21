@@ -28,18 +28,16 @@ const Admin = () => {
       );
     }
   return (
-    <div className="m-auto w-full pt-24 bg-white ">
-      <div className="w-full  bg-azul h-12 -mt-1 pt-3 ">
-        <h1 className="text-white pl-4">Panel de Administrador </h1>
+    <div className="m-auto w-full mt-[85px]   ">
         <div className="flex flex-1 ">
-          <div className="bg-red-500 flex- w-1/4 mt-3 ">{<NavegacionAdmin/>}</div>
-          <div className="flex-1 w-full">
+          <div className="bg-celeste flex- w-64 max-h-full ">{<NavegacionAdmin/>}</div>
+          <div className="flex-1 w-full h-[843px] bg-azul  ">
             <Outlet/>
           
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

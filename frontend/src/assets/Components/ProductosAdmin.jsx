@@ -53,9 +53,9 @@ export const ProductosAdmin = () => {
   
     return (
       <>
-        <div className="flex gap-3 m-auto w-full justify-center  bg-azul max-w-[1240px] h-[800px]">
+        <div className="flex gap-3 m-auto w-full justify-center  ">
           
-          <div className="w-full flex-[4] flex-col items-center justify-center  pt-0 pb-6 mb-12 rounded-lg p-4 ">
+          <div className="w-full flex-[4] flex-col items-center justify-center  pt-0 pb-6 mb-12 rounded-lg p-4 max-w-[1240px] ">
             <div className="flex justify-between mt-12 w-full items-center px-4">
               <h2 className="text-2xl font-semibold">Listado de Productos</h2>
               <button

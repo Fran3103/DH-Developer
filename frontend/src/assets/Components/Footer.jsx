@@ -1,7 +1,7 @@
 import { FaCopyright, FaInstagram, FaFacebookSquare,FaTwitter, FaLinkedinIn } from "react-icons/fa";
 export const Footer = () => {
   return (
-    <div className=" m-auto bg-azul p-3  w-full relative bottom-0">
+    <div className=" m-auto bg-azul p-3  w-full ">
         <div className="flex flex-row max-w-[1240px]  justify-between items-center m-auto p-3 text-white">
             <p className="flex items-center gap-3"> <FaCopyright/> 2024 | Easy Stay</p>
             <div className="flex flex-row items-center justify-center gap-4 text-xl">
