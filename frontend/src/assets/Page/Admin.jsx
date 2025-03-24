@@ -39,6 +39,15 @@ const Admin = () => {
         </div>
       );
     }
+    if (user === null ) {
+      return (
+        <div className="flex justify-center items-center h-screen bg-celeste">
+          <h1 className="text-white text-2xl">
+            Debe iniciar sesion como administrador para poder ver esta pagina
+          </h1>
+        </div>
+      );
+    }
     else{
   return (
     <div className="m-auto w-full mt-[85px]   ">
