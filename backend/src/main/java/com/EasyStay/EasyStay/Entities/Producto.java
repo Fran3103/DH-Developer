@@ -44,6 +44,13 @@ public class Producto {
     @JsonBackReference
     private Usuarios user;
 
+    @ManyToMany
+    @JoinTable(
+            name = "producto_caracteristicas",
+            joinColumns = @JoinColumn(name = "producto_id"),
+            inverseJoinColumns = @JoinColumn(name = "caracteristica_id"))
+    private List<Caracteristicas> caracteristicas; // Relación con Caracteristicas
+
     public Producto() {
     }
 
@@ -150,5 +157,13 @@ public class Producto {
 
     public void setImages(List<ImagesArray> images) {
         this.images = images;
+    }
+
+    public List<Caracteristicas> getCaracteristicas() {
+        return caracteristicas;
+    }
+
+    public void setCaracteristicas(List<Caracteristicas> caracteristicas) {
+        this.caracteristicas = caracteristicas;
     }
 }

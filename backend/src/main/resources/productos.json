@@ -1,3 +1,4 @@
+
 [
   {
     "id": 1,
@@ -15,6 +16,32 @@
       { "url": "/images/casa_1_3.jpg" },
       { "url": "/images/casa_1_4.jpg" },
       { "url": "/images/casa_1_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -32,6 +59,32 @@
       { "url": "/images/casa_2_2.jpg" },
       { "url": "/images/casa_2_3.jpg" },
       { "url": "/images/casa_2_4.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -51,6 +104,32 @@
       { "url": "/images/casa_3_4.jpg" },
       { "url": "/images/casa_3_5.jpg" },
       { "url": "/images/casa_3_6.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -69,6 +148,32 @@
       { "url": "/images/casa_4_3.jpg" },
       { "url": "/images/casa_4_4.jpg" },
       { "url": "/images/casa_4_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -87,6 +192,32 @@
       { "url": "/images/departamento_1_3.jpg" },
       { "url": "/images/departamento_1_4.jpg" },
       { "url": "/images/departamento_1_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -105,6 +236,32 @@
       { "url": "/images/departamento_2_3.jpg" },
       { "url": "/images/departamento_2_4.jpg" },
       { "url": "/images/departamento_2_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -122,6 +279,32 @@
       { "url": "/images/departamento_3_2.jpg" },
       { "url": "/images/departamento_3_3.jpg" },
       { "url": "/images/departamento_3_4.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -139,6 +322,32 @@
       { "url": "/images/departamento_4_2.jpg" },
       { "url": "/images/departamento_4_3.jpg" },
       { "url": "/images/departamento_4_4.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -157,6 +366,32 @@
       { "url": "/images/departamento_5_3.jpg" },
       { "url": "/images/departamento_5_4.jpg" },
       { "url": "/images/departamento_5_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -175,6 +410,32 @@
       { "url": "/images/hotel_1_3.jpg" },
       { "url": "/images/hotel_1_4.jpg" },
       { "url": "/images/hotel_1_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -193,6 +454,32 @@
       { "url": "/images/hotel_2_3.jpg" },
       { "url": "/images/hotel_2_4.jpg" },
       { "url": "/images/hotel_2_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -211,6 +498,32 @@
       { "url": "/images/hotel_3_3.jpg" },
       { "url": "/images/hotel_3_4.jpg" },
       { "url": "/images/hotel_3_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -229,6 +542,32 @@
       { "url": "/images/hotel_4_3.jpg" },
       { "url": "/images/hotel_4_4.jpg" },
       { "url": "/images/hotel_4_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -247,6 +586,32 @@
       { "url": "/images/hotel_5_3.jpg" },
       { "url": "/images/hotel_5_4.jpg" },
       { "url": "/images/hotel_5_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -265,6 +630,32 @@
       { "url": "/images/casa_5_3.jpg" },
       { "url": "/images/casa_5_4.jpg" },
       { "url": "/images/casa_5_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -283,6 +674,32 @@
       { "url": "/images/casa_6_3.jpg" },
       { "url": "/images/casa_6_4.jpg" },
       { "url": "/images/casa_6_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -300,6 +717,32 @@
       { "url": "/images/casa_7_2.jpg" },
       { "url": "/images/casa_7_3.jpg" },
       { "url": "/images/casa_7_4.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -317,6 +760,32 @@
       { "url": "/images/casa_8_2.jpg" },
       { "url": "/images/casa_8_3.jpg" },
       { "url": "/images/casa_8_4.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -335,6 +804,32 @@
       { "url": "/images/casa_9_3.jpg" },
       { "url": "/images/casa_9_4.jpg" },
       { "url": "/images/casa_9_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -352,6 +847,32 @@
       { "url": "/images/casa_10_2.jpg" },
       { "url": "/images/casa_10_3.jpg" },
       { "url": "/images/casa_10_4.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -370,6 +891,32 @@
       { "url": "/images/hotel_6_3.jpg" },
       { "url": "/images/hotel_6_4.jpg" },
       { "url": "/images/hotel_6_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -388,6 +935,32 @@
       { "url": "/images/hotel_7_3.jpg" },
       { "url": "/images/hotel_7_4.jpg" },
       { "url": "/images/hotel_7_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -406,6 +979,32 @@
       { "url": "/images/hotel_8_3.jpg" },
       { "url": "/images/hotel_8_4.jpg" },
       { "url": "/images/hotel_8_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -424,6 +1023,32 @@
       { "url": "/images/hotel_9_3.jpg" },
       { "url": "/images/hotel_9_4.jpg" },
       { "url": "/images/hotel_9_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -442,6 +1067,32 @@
       { "url": "/images/hotel_10_3.jpg" },
       { "url": "/images/hotel_10_4.jpg" },
       { "url": "/images/hotel_10_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -460,6 +1111,32 @@
       { "url": "/images/departamento_6_3.jpg" },
       { "url": "/images/departamento_6_4.jpg" },
       { "url": "/images/departamento_6_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -483,6 +1160,32 @@
       { "url": "/images/departamento_11_3.jpg" },
       { "url": "/images/departamento_11_4.jpg" },
       { "url": "/images/departamento_11_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -501,6 +1204,32 @@
       { "url": "/images/departamento_8_3.jpg" },
       { "url": "/images/departamento_8_4.jpg" },
       { "url": "/images/departamento_8_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -519,6 +1248,32 @@
       { "url": "/images/departamento_9_3.jpg" },
       { "url": "/images/departamento_9_4.jpg" },
       { "url": "/images/departamento_9_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -537,6 +1292,32 @@
       { "url": "/images/departamento_10_3.jpg" },
       { "url": "/images/departamento_10_4.jpg" },
       { "url": "/images/departamento_10_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   },
   {
@@ -555,6 +1336,32 @@
       { "url": "/images/departamento_11_3.jpg" },
       { "url": "/images/departamento_11_4.jpg" },
       { "url": "/images/departamento_11_5.jpg" }
+    ],
+    "caracteristicas": [
+      {
+        "id": 1,
+        "name": "Wi-Fi gratuito"
+      },
+      {
+        "id": 2,
+        "name": "Estacionamiento gratuito"
+      },
+      {
+        "id": 3,
+        "name": "Aire acondicionado"
+      },
+      {
+        "id": 4,
+        "name": "Cocina equipada"
+      },
+      {
+        "id": 5,
+        "name": "Terraza"
+      },
+      {
+        "id": 6,
+        "name": "TV por cable/satélite"
+      }
     ]
   }
 

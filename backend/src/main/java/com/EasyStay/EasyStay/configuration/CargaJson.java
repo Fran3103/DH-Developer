@@ -1,7 +1,9 @@
 package com.EasyStay.EasyStay.configuration;
 
+import com.EasyStay.EasyStay.Entities.Caracteristicas;
 import com.EasyStay.EasyStay.Entities.Producto;
 import com.EasyStay.EasyStay.Entities.Usuarios;
+import com.EasyStay.EasyStay.Repositories.ICaracteristicasRepository;
 import com.EasyStay.EasyStay.Repositories.IProductoRepository;
 import com.EasyStay.EasyStay.Repositories.IUsuarioRepository;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -20,10 +22,34 @@ public class CargaJson {
 
 
     @Bean
-    public CommandLineRunner loadData(IProductoRepository productoRepository, IUsuarioRepository usuarioRepository) {
+    public CommandLineRunner loadData(IProductoRepository productoRepository, IUsuarioRepository usuarioRepository, ICaracteristicasRepository caracteristicasRepository) {
         //commandlinerunner ejecuca el codigo al inicio de la app.
         return args -> {
             //verifico que el repositorio este vacio
+
+
+            if (caracteristicasRepository.count() == 0  ) {
+                //creo un objeo que va a ser mapeado
+                ObjectMapper objectMapper = new ObjectMapper();
+                try {
+                    System.out.println("Intentando leer el archivo JSON  de Caracteristicas...");
+                    //creo lista de objeto a ser mapeado
+                    List<Caracteristicas> caracteristicas = objectMapper.readValue(
+                            new File("src/main/resources/caracteristicas.json"),
+                            //se va a mapea un producto desde el json
+                            new TypeReference<List<Caracteristicas>>() {});
+
+                    System.out.println("Guardando productos en la base de datos...");
+                    caracteristicasRepository.saveAll(caracteristicas);
+                    System.out.println("Caracteristicas guardados exitosamente.");
+                } catch (IOException e) {
+                    System.err.println("Error al leer el archivo JSON:");
+                    e.printStackTrace();
+                } catch (Exception e) {
+                    System.err.println("Error inesperado:");
+                    e.printStackTrace();
+                }
+            }
             if (productoRepository.count() == 0  ) {
                 //creo un objeo que va a ser mapeado
                 ObjectMapper objectMapper = new ObjectMapper();
@@ -46,7 +72,6 @@ public class CargaJson {
                     e.printStackTrace();
                 }
             }
-
             //Verifica si la BD esta vacia
             if (usuarioRepository.count() == 0){
                 ObjectMapper objectMapper = new ObjectMapper();
