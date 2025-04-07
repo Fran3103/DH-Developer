@@ -32,6 +32,7 @@ public class SecurityConfig {
                 .requestMatchers("/productos/**").permitAll()
                 .requestMatchers("/images/**").permitAll()
                 .requestMatchers("/usuarios/**").permitAll()
+                .requestMatchers("/caracteristicas/**").permitAll()
                 .requestMatchers("/auth/**","/error").permitAll()
                 .requestMatchers("/admin/**").hasRole("usuario")
                 .anyRequest().authenticated()
