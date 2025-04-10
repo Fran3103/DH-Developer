@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -44,12 +45,12 @@ public class Producto {
     @JsonBackReference
     private Usuarios user;
 
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "producto_caracteristicas",
             joinColumns = @JoinColumn(name = "producto_id"),
             inverseJoinColumns = @JoinColumn(name = "caracteristica_id"))
-    private List<Caracteristicas> caracteristicas; // Relación con Caracteristicas
+    private List<Caracteristicas> caracteristicas = new ArrayList<>(); // Relación con Caracteristicas
 
     public Producto() {
     }

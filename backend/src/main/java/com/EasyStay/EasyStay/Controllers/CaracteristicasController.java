@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Optional;
@@ -86,6 +87,27 @@ public class CaracteristicasController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
+
+    @PutMapping
+    public ResponseEntity<String> update(
+            @RequestParam("id") Long id,
+            @RequestParam("name") String name,
+            @RequestParam("icono")String icono){
+
+        Optional<Caracteristicas> caracteristica1 = caracteristicasService.findById(id);
+
+        if (caracteristica1.isPresent()) {
+            Caracteristicas caracteristica = caracteristica1.get();
+            caracteristica.setName(name);
+            caracteristica.setIcono(icono);
+
+            caracteristicasService.update(caracteristica);
+            return ResponseEntity.ok("Se actualizó la caracteristica  correctamente");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No se pudo actualizar la caracteristica");
+        }
+    }
+
 
     @DeleteMapping("/producto/{productoId}/remove/{caracteristicaId}")
     public ResponseEntity<String> removeCaracteristicaFromProducto(@PathVariable Long productoId, @PathVariable Long caracteristicaId) {

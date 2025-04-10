@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -13,26 +14,24 @@ public class Caracteristicas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "caracteristica_id")
     private  Long id ;
 
     private String name;
+    private String icono;
 
-    @ManyToMany(mappedBy = "caracteristicas")
+    @ManyToMany(mappedBy = "caracteristicas", cascade = {CascadeType.PERSIST, CascadeType.MERGE} )
     @JsonBackReference
-    private List<Producto> productos; // Relación inversa
+    private List<Producto> productos = new ArrayList<>(); // Relación inversa
 
 
     public Caracteristicas() {
     }
 
-    public Caracteristicas(String name) {
-        this.name = name;
-    }
 
-    public Caracteristicas(Long id, String name) {
-        this.id = id;
+
+    public Caracteristicas( String name, String icono) {
         this.name = name;
+        this.icono = icono;
     }
 
     public Long getId() {
@@ -58,4 +57,11 @@ public class Caracteristicas {
         this.productos = productos;
     }
 
+    public String getIcono() {
+        return icono;
+    }
+
+    public void setIcono(String icono) {
+        this.icono = icono;
+    }
 }

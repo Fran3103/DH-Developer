@@ -60,7 +60,13 @@ public class CargaJson {
                             new File("src/main/resources/productos.json"),
                             //se va a mapea un producto desde el json
                             new TypeReference<List<Producto>>() {});
-
+                    for (Producto producto : productos) {
+                        List<Caracteristicas> caracteristicasFinal = new java.util.ArrayList<>();
+                        for (Caracteristicas cJson : producto.getCaracteristicas()) {
+                            caracteristicasRepository.findById(cJson.getId()).ifPresent(caracteristicasFinal::add);
+                        }
+                        producto.setCaracteristicas(caracteristicasFinal);
+                    }
                     System.out.println("Guardando productos en la base de datos...");
                     productoRepository.saveAll(productos);
                     System.out.println("Productos guardados exitosamente.");

@@ -28,12 +28,15 @@ public class SecurityConfig {
 
         http
                 .csrf().disable()
+                .headers(headers -> headers.frameOptions(frame -> frame.disable()))
                 .authorizeHttpRequests()
+
                 .requestMatchers("/productos/**").permitAll()
                 .requestMatchers("/images/**").permitAll()
                 .requestMatchers("/usuarios/**").permitAll()
                 .requestMatchers("/caracteristicas/**").permitAll()
                 .requestMatchers("/auth/**","/error").permitAll()
+                .requestMatchers("/h2-console/**").permitAll()
                 .requestMatchers("/admin/**").hasRole("usuario")
                 .anyRequest().authenticated()
                 .and()
