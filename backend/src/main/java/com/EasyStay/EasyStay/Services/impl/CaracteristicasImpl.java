@@ -1,6 +1,7 @@
 package com.EasyStay.EasyStay.Services.impl;
 
 import com.EasyStay.EasyStay.Entities.Caracteristicas;
+import com.EasyStay.EasyStay.Entities.Producto;
 import com.EasyStay.EasyStay.Repositories.ICaracteristicasRepository;
 import com.EasyStay.EasyStay.Services.ICaracteristicasService;
 import org.springframework.stereotype.Service;
@@ -28,8 +29,15 @@ public class CaracteristicasImpl implements ICaracteristicasService {
 
     @Override
     public void delete(Long id) {
-        caracteristicasRepository.deleteById(id);
-
+        Caracteristicas caracteristica = caracteristicasRepository.findById(id)
+                .orElseThrow(()-> new RuntimeException("Caracteristica no encontrada"));
+        
+        for (Producto producto : caracteristica.getProductos()){
+            producto.getCaracteristicas().remove(caracteristica);
+        }
+        
+        caracteristica.getProductos().clear();
+        caracteristicasRepository.delete(caracteristica);
     }
 
     @Override
@@ -40,6 +48,11 @@ public class CaracteristicasImpl implements ICaracteristicasService {
     @Override
     public Optional<Caracteristicas> findByName(String name) {
         return caracteristicasRepository.findByName(name);
+    }
+
+    @Override
+    public void update(Caracteristicas caracteristica) {
+        caracteristicasRepository.save(caracteristica);
     }
 
     ;

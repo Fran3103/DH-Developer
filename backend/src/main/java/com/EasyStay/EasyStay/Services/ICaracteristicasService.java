@@ -17,4 +17,6 @@ public interface ICaracteristicasService {
     Caracteristicas save(Caracteristicas caracteristicas);
 
     Optional <Caracteristicas> findByName(String name);
+
+    void update(Caracteristicas caracteristica);
 }
