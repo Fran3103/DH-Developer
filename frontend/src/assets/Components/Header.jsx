@@ -72,7 +72,7 @@ const Header = () => {
 
           {user ? (
             <>
-              <button className=" relative" ref={menuRef}>
+              <div className=" relative cursor-pointer" ref={menuRef}>
                 <div
                   onClick={toggleMenu}
                   className="flex items-center justify-around gap-3"
@@ -114,7 +114,7 @@ const Header = () => {
                     <div onClick={handleLogout}>Cerrar Sesion</div>
                   </li>
                 </div>
-              </button>
+              </div>
             </>
           ) : (
             <>

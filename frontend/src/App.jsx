@@ -14,6 +14,7 @@ import "./App.css";
 import Perfil from "./assets/Page/Perfil";
 import { Usuarios } from "./assets/Components/Usuarios";
 import { ProductosAdmin } from "./assets/Components/ProductosAdmin";
+import { AdministraCaracteristicas } from "./assets/Components/AdministraCaracteristicas";
 
 function App() {
   return (
@@ -30,9 +31,10 @@ function App() {
             <Route path="/productos" element={<Productos />} />
             <Route path="/perfil" element={<Perfil />} />
             <Route path="/admin/*" element={<Admin />} >
-              <Route path="productosAdmin" element={<ProductosAdmin />}/>
+              <Route path="productos" element={<ProductosAdmin />}/>
               <Route index element={<ProductosAdmin />}/>
               <Route path="usuarios" element={<Usuarios />}/>
+              <Route path="administrar caracteristicas" element={<AdministraCaracteristicas />}/>
             </Route>
           </Routes>
         </div>
