@@ -28,6 +28,11 @@ public class CaracteristicasImpl implements ICaracteristicasService {
     }
 
     @Override
+    public List<Caracteristicas> findAllIds(List<Long> ids) {
+        return caracteristicasRepository.findAllById(ids);
+    }
+
+    @Override
     public void delete(Long id) {
         Caracteristicas caracteristica = caracteristicasRepository.findById(id)
                 .orElseThrow(()-> new RuntimeException("Caracteristica no encontrada"));

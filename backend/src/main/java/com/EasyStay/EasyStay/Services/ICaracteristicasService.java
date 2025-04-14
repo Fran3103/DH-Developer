@@ -12,6 +12,7 @@ public interface ICaracteristicasService {
 
     List<Caracteristicas> allCaracteristicas() ;
     Optional<Caracteristicas> findById (Long id);
+    List<Caracteristicas> findAllIds(List<Long> ids);
     void delete(Long id);
 
     Caracteristicas save(Caracteristicas caracteristicas);
