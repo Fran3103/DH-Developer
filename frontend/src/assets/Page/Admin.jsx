@@ -7,8 +7,7 @@ const Admin = () => {
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const {user} = useContext(UserContext)
-  console.log(user)
-  
+ 
   useEffect(() => {
       const handleResize = () => {
         setIsMobile(window.innerWidth < 1024);

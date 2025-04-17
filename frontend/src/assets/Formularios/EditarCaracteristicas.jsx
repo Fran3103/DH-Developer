@@ -1,21 +1,31 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
+import { iconMap } from "../../utils/iconMap";
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
+} from "@headlessui/react";
 
 // eslint-disable-next-line react/prop-types
 const EditarCaracteristicas = ({ cerrar, confirmar, datosEditar }) => {
   const [formData, setFormData] = useState({
     id: "",
-    name: ""
+    name: "",
+    icono:""
   });
   const [loading, setLoading] = useState(false);
   const [estado, setEstado] = useState(true);
   const [enviado, setEnviado] = useState(false);
   const [error, setError] = useState(null);
+  const Icon = iconMap[formData.icono];
   useEffect(() => {
     if (datosEditar) {
       setFormData({
         id: datosEditar.id,
-        name: datosEditar.name
+        name: datosEditar.name,
+        icono:datosEditar.icono
       });
     }
   }, [datosEditar]);
@@ -32,14 +42,15 @@ const EditarCaracteristicas = ({ cerrar, confirmar, datosEditar }) => {
 
   const handleSubmit = async (e) => {
 
-    e.preventDefault();
-    setLoading(true);
-    setEstado(true);
-    setEnviado(false);
+    e.preventDefault()
+    setLoading(true)
+    setEstado(true)
+    setEnviado(false)
 
-    const data = new FormData();
-    data.append("id", formData.id);
-    data.append("name", formData.name);
+    const data = new FormData()
+    data.append("id", formData.id)
+    data.append("name", formData.name)
+    data.append("icono",formData.icono)
     try {
       const response = await fetch(`http://localhost:3000/caracteristicas`, {
         method: "PUT",
@@ -92,6 +103,57 @@ const EditarCaracteristicas = ({ cerrar, confirmar, datosEditar }) => {
               className="w-2/3 border px-3 py-2 rounded"
             />
           </div>
+          <div className="flex w-full justify-between">
+                      <label className="block mb-1">Icono:</label>
+                      <Listbox
+                        value={formData.icono}
+                        onChange={(value) => {
+                         
+                          if (typeof value === "string" && iconMap[value]) {
+                            setFormData({ ...formData, icono: value });
+                          } else {
+                            setFormData({ ...formData, icono: "" });
+                          }
+                        }}
+                      >
+                        <div className="relative w-2/3">
+                          <ListboxButton className="w-full border px-3 py-2 rounded text-left">
+                            {formData.icono && iconMap[formData.icono] ? (
+                              <span className="flex items-center gap-2">
+                                <Icon className="text-xl"/>
+                               
+                              </span>
+                            ) : (
+                              "Selecciona un icono"
+                            )}
+                          </ListboxButton>
+                          <ListboxOptions className="absolute z-10 mt-1 max-h-60 w-full grid grid-cols-3 gap-2 p-2 overflow-auto rounded bg-white shadow">
+                            {Object.entries(iconMap).map(([key, Icon]) =>
+                              Icon ? (
+                                <ListboxOption
+                                  key={key}
+                                  value={key}
+                                  className={({ selected }) =>
+                                    `px-3 py-2 flex items-center gap-2 cursor-pointer ${
+                                      selected ? "bg-blue-100" : ""} `
+                                  }
+                                >
+                                  {({ selected }) => (
+                                    <>
+                                      <Icon className="text-xl" />
+          
+                                      {selected && (
+                                        <span className="m-auto text-blue-500">✓</span>
+                                      )}
+                                    </>
+                                  )}
+                                </ListboxOption>
+                              ) : null
+                            )}
+                          </ListboxOptions>
+                        </div>
+                      </Listbox>
+                    </div>
           
         <div className="flex justify-end space-x-2 mt-4">
             <button

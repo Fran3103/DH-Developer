@@ -19,7 +19,7 @@ export const AdministraCaracteristicas = () => {
 
   const [eliminarId, setEliminarId] = useState("");
   const [eliminarProd, setEliminarProd] = useState(false);
-  console.log(datos);
+
   // Manejo de carga y errores
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;

@@ -17,9 +17,7 @@ const AgregarCaracteristica = ({ cerrar, confirmar }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  console.log(iconMap);
-  console.log("formData.icono:", formData.icono);
-  console.log("iconMap[formData.icono]:", iconMap[formData.icono]);
+
   const Icon = iconMap[formData.icono];
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -80,7 +78,7 @@ const AgregarCaracteristica = ({ cerrar, confirmar }) => {
             <Listbox
               value={formData.icono}
               onChange={(value) => {
-                console.log("Valor seleccionado:", value);
+               
                 if (typeof value === "string" && iconMap[value]) {
                   setFormData({ ...formData, icono: value });
                 } else {
