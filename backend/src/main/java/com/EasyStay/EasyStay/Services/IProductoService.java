@@ -25,4 +25,7 @@ public interface IProductoService {
 
     List<Producto> findAll();
     boolean existsByName(String name);
+
+    List<Producto> findByCategory(String category);
+    List<Producto> findByCategoryIgnoreCase(String category);
 }
