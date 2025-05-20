@@ -45,6 +45,17 @@ public class ProductosController {
         return producto.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping({"/categoria/{category}"})
+    public ResponseEntity<List<Producto>> findCategory(@PathVariable String category){
+
+        List<Producto> productos = productoService.findByCategoryIgnoreCase(category);
+        System.out.println("Buscando productos en categoría: " + category);
+        if (productos.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(productos);
+    }
+
     @GetMapping
     public ResponseEntity<List<Producto>> findAll() {
         return ResponseEntity.ok(productoService.findAll());

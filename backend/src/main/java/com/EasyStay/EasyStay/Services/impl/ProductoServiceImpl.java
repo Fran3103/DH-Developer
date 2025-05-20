@@ -55,4 +55,14 @@ public class ProductoServiceImpl implements IProductoService {
     public boolean existsByName(String name) {
         return productoRepository.existsByName(name);
     }
+
+    @Override
+    public List<Producto> findByCategory(String category) {
+        return productoRepository.findByCategory(category);
+    }
+
+    @Override
+    public List<Producto> findByCategoryIgnoreCase(String category) {
+        return productoRepository.findByCategoryIgnoreCase(category);
+    }
 }
