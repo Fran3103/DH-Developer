@@ -40,6 +40,9 @@ public class Usuarios implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @Column(name = "enabled")
+    private boolean enabled;
+
 
     @OneToMany(mappedBy =  "user", cascade = CascadeType.ALL)
     @JsonManagedReference

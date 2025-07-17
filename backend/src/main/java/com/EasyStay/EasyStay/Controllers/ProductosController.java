@@ -1,5 +1,6 @@
 package com.EasyStay.EasyStay.Controllers;
 
+import com.EasyStay.EasyStay.Dtos.CategoriaCount;
 import com.EasyStay.EasyStay.Entities.Caracteristicas;
 import com.EasyStay.EasyStay.Entities.ImagesArray;
 import com.EasyStay.EasyStay.Entities.Producto;
@@ -10,7 +11,11 @@ import com.EasyStay.EasyStay.Services.IProductoService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.GroupSequence;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -56,9 +61,30 @@ public class ProductosController {
         return ResponseEntity.ok(productos);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Producto>> findAll() {
         return ResponseEntity.ok(productoService.findAll());
+    }
+
+    @GetMapping("/filter")
+    public ResponseEntity<Page<Producto>> list(
+            @RequestParam(value="category", required=false) List<String> category,
+            @RequestParam(value="minPrice", required=false) Double minPrice,
+            @RequestParam(value="maxPrice", required=false) Double maxPrice,
+            @RequestParam(value="location", required=false) String location,
+            @RequestParam(value="feature", required=false) List<Long> caracteristicasIds,
+            Pageable page
+    ){
+        Page<Producto> filters = productoService.findByFilters(category, minPrice, maxPrice, location, caracteristicasIds, page);
+        System.out.println("Filtro recibido → categories: "
+                + category + ", features: " + caracteristicasIds );
+        return ResponseEntity.ok(filters);
+    }
+
+    @GetMapping("/categorias")
+    public ResponseEntity<List<CategoriaCount>> listarCategoriasConTotales(){
+        var lista = productoService.getCountCategory();
+        return ResponseEntity.ok(lista);
     }
 
     @PostMapping
