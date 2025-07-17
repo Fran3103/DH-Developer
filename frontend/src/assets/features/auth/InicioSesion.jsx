@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { loginUsuario } from "./authService";
 
 // eslint-disable-next-line react/prop-types
 const InicioSesion = ({ cerrar, confirmar }) => {
@@ -17,24 +18,17 @@ const InicioSesion = ({ cerrar, confirmar }) => {
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:3000/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+     const result = await loginUsuario(formData);
+      localStorage.setItem("token", result.token);
+      confirmar() 
+      window.location.reload();
 
-      if (response.ok) {
-        const result = await response.json();
-        localStorage.setItem("token", result.token);
-        confirmar(); // Acción para cerrar el formulario y confirmar el inicio de sesión
-        window.location.reload();
-      } else if (response.status === 401) {
-        setError("La contraseña es incorrecta");
-      } else {
-        setError("El Usuario no existe");
-      }
     } catch (err) {
-      setError("Error en la solicitud");
+      if (err.status === 401) {
+        setError("La contraseña es  incorrecta")
+      }else {
+        setError("El usuario no existe o el email es incorrecto");
+      }
     } finally {
       setLoading(false);
     }

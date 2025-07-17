@@ -1,8 +1,8 @@
 import { useState } from "react";
-import useFetch from "../Hooks/useFetchData";
+import useFetch from "../../Hooks/useFetchData";
 import { FaEdit, FaBan, FaCheckCircle } from "react-icons/fa";
 
-import CambiaRol from "./CambiaRol";
+import CambiaRol from "../../features/admin/CambiaRol";
 
 export const Usuarios = () => {
   const [paginaActual, setPaginaActual] = useState(1);

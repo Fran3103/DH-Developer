@@ -1,5 +1,5 @@
-import Categorias from "../Components/Categorias"
-import ProductosHome from "./ProductosHome"
+import Categorias from "../features/categorias/Categorias"
+import ProductosHome from "../features/products/components/ProductosHome"
 
 import Recomendados from "../Page/Recomendados"
 import Searcher from "../Components/Searcher"

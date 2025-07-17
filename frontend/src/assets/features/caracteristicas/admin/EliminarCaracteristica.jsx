@@ -1,4 +1,4 @@
-
+import { deleteCaracteristica } from "../CaracteristicaService";
 // eslint-disable-next-line react/prop-types
 const EliminarCaracteristica = ({setUpdate, eliminarId, eliminarProd, loading, eliminarProducto}) => {
 
@@ -11,23 +11,17 @@ const EliminarCaracteristica = ({setUpdate, eliminarId, eliminarProd, loading, e
         "id": eliminarId.id        
     }
 
-    console.log(prod)
 
-    const eliminar = async (eliminarId) => {
-        try {
-            const response = await fetch(`http://localhost:3000/caracteristicas/${eliminarId}`, {
-                method: 'DELETE',
-            });
+    const eliminar = async () => {
+          try {
+      await deleteCaracteristica(prod.id);
 
-            if (response.ok) {
-                console.log('Caracteristica eliminada con éxito');
-                setUpdate(prev => !prev); // Toggle para actualizar datos
-            } else {
-                console.error('Error al eliminar la caracteristica');
-            }
-        } catch (error) {
-            console.error('Error en la solicitud:', error);
-        }
+      setUpdate(prev => !prev);
+    } catch (error) {
+      console.error("Error al eliminar la característica:", error.message);
+    } finally {
+      eliminarProducto(); // cerrar modal siempre
+    }
     };
   return (
     <div className= {eliminarProd ?"fixed inset-0 flex  items-center justify-center bg-black bg-opacity-50  flex-col" : 'hidden' } >

@@ -1,15 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaLongArrowAltLeft } from "react-icons/fa";
-import { iconMap } from "../../utils/iconMap";
-import "../Css/galeria.css";
-import Galeria from "../Components/Galeria";
+import { iconMap } from "../../../utils/iconMap";
+import "../../../styles/galeria.css";
+import Galeria from "../../../Components/Galeria";
 const Detalle = () => {
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
   const [error, setError] = useState(null);
   const [galeria, setGaleria] = useState([]);
   const [mostrarGaleria, setMostrarGaleria] = useState(false);
+  
   useEffect(() => {
     const fetchProducto = async () => {
       try {

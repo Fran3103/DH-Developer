@@ -1,4 +1,4 @@
-import { actualizarRol } from "../Hooks/useFetchDataEdit";
+import { actualizarRol } from "../../Hooks/useFetchDataEdit";
 import PropTypes from "prop-types";
 
 export default function CambiaRol({rol, cerrar, confirmar}) {

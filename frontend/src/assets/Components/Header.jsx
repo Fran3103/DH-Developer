@@ -1,32 +1,32 @@
 import { useContext, useEffect, useState, useRef } from "react";
-import icon from "../../../public/icono.svg";
-import "../Css/header.css";
+import icon from "../../icono.svg";
+import "../styles/Header.css";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import RegisterForm from "../Formularios/RegisterForm";
-import InicioSesion from "../Formularios/InicioSesion";
+import RegisterForm from "../features/auth/RegisterForm";
+import InicioSesion from "../features/auth/InicioSesion";
 import UserContext from "../Context/UseContext";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuUser, setMenuUser] = useState(false);
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [iniciarSesion, setIniciarSesion] = useState(false);
   const { user, logout } = useContext(UserContext);
-  const menuRef = useRef(null)
+  const menuRef = useRef(null);
 
   useEffect(() => {
-
     // funcion para que el menu se cierre cuando se hace click en otro lado
-    const handleClick = (event)=> {
-      if (menuRef.current && !menuRef.current.contains(event.target)){
-        setMenuOpen(false)
+    const handleClick = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+        setMenuUser(false);
       }
-    }
+    };
     document.addEventListener("mousedown", handleClick);
     return () => {
-      document.removeEventListener("mousedown", handleClick)
+      document.removeEventListener("mousedown", handleClick);
     };
-   
   }, []);
 
   const name =
@@ -48,9 +48,13 @@ const Header = () => {
     setMenuOpen((prev) => !prev);
   };
 
+  const toggleUserMenu = () => {
+    setMenuUser((prev) => !prev);
+  };
+
   const handleLogout = () => {
     logout();
-    navigator("/")
+    navigator("/");
   };
 
   return (
@@ -72,12 +76,12 @@ const Header = () => {
 
           {user ? (
             <>
-              <div className=" relative cursor-pointer" ref={menuRef}>
+              <div className=" relative cursor-pointer " ref={menuRef}>
                 <div
-                  onClick={toggleMenu}
+                  onClick={toggleUserMenu}
                   className="flex items-center justify-around gap-3"
                 >
-                  <span>
+                  <span className="hidden md:block text-white text-sm">
                     {user.name} {user.lastName}
                   </span>
                   <span className="w-10 h-10 flex items-center justify-center rounded-full bg-celeste text-white text-lg font-semibold">
@@ -86,29 +90,38 @@ const Header = () => {
                 </div>
                 <div
                   className={`${
-                    menuOpen
-                      ? "btn-container-user active-user  text-white rounded-lg"
+                    menuUser
+                      ? "btn-container-user active-user  text-white rounded-lg py-2 px-2"
                       : " btn-container-user   text-white rounded-lg"
                   }`}
                 >
+                  <span className="pl-3 pt-3 md:hidden text-white text-sm">
+                    {" "}
+                    {user.name} {user.lastName}
+                  </span>
+                  <hr className="w-full border-gray-300 " />
                   <li className="list-none hover:shadow-xl w-full rounded-lg text-left pl-3">
-                    <Link to={"/perfil"} onClick={toggleMenu}>
+                    <Link to={"/perfil"} onClick={toggleUserMenu}>
                       Perfil
                     </Link>
                   </li>
-                  {user?.role[0] === "ADMIN" ? <li
-                    onClick={toggleMenu}
-                    className="list-none hover:shadow-xl w-full rounded-lg text-left pl-3"
-                  >
-                    <Link to={"/admin"}>Panel Administrador</Link>
-                  </li>  : <li
-                    onClick={toggleMenu}
-                    className="list-none hover:shadow-xl w-full rounded-lg text-left pl-3"
-                  >
-                    <Link to={"/use-config"}>Configuracion</Link>
-                  </li>}
+                  {user?.role[0] === "ADMIN" ? (
+                    <li
+                      onClick={toggleUserMenu}
+                      className="list-none hover:shadow-xl w-full rounded-lg text-left pl-3"
+                    >
+                      <Link to={"/admin"}>Panel Administrador</Link>
+                    </li>
+                  ) : (
+                    <li
+                      onClick={toggleUserMenu}
+                      className="list-none hover:shadow-xl w-full rounded-lg text-left pl-3"
+                    >
+                      <Link to={"/use-config"}>Configuracion</Link>
+                    </li>
+                  )}
                   <li
-                    onClick={toggleMenu}
+                    onClick={toggleUserMenu}
                     className="list-none hover:shadow-xl w-full rounded-lg text-left pl-3"
                   >
                     <div onClick={handleLogout}>Cerrar Sesion</div>
@@ -117,28 +130,12 @@ const Header = () => {
               </div>
             </>
           ) : (
-            <>
-              <button
-                onClick={toggleMenu}
-                className="md:hidden w-0 mr-10 text-white hover:text-gray-400 cursor-pointer "
-              >
-                <FaBars className="m-auto text-xl" />
-              </button>
-              <div className="hidden md:flex   gap-2">
-                <button
-                  className="bg-celeste p-2 hover:bg-celesteOscuro w-28 button text-white md:text-base"
-                  onClick={() => setMostrarFormulario(true)}
-                >
-                  Crear Cuenta
-                </button>
-                <button
-                  className="bg-celeste p-2 hover:bg-celesteOscuro w-28 button text-white md:text-base"
-                  onClick={() => setIniciarSesion(true)}
-                >
-                  Iniciar Sesion
-                </button>
-              </div>
-            </>
+            <button
+              onClick={toggleMenu}
+              className="md:hidden w-0 mr-10 text-white hover:text-gray-400 cursor-pointer "
+            >
+              <FaBars className="m-auto text-xl" />
+            </button>
           )}
         </div>
         <div

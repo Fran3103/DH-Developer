@@ -1,7 +1,7 @@
-import { NavegacionAdmin } from "../Components/NavegacionAdmin";
+import { NavegacionAdmin } from "../admin/NavegacionAdmin";
 import { Outlet } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
-import UserContext from "../Context/UseContext";
+import UserContext from "../../Context/UseContext";
 
 const Admin = () => {
 
