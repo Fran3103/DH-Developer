@@ -18,7 +18,6 @@ export const actualizarRol = async (id, rol) => {
         throw new Error(data)
     }
 
-    console.log("Exito: ", data)
 
     }
 

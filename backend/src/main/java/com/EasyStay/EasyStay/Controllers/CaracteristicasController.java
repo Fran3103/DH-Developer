@@ -88,9 +88,9 @@ public class CaracteristicasController {
         }
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<String> update(
-            @RequestParam("id") Long id,
+            @PathVariable("id") Long id,
             @RequestParam("name") String name,
             @RequestParam("icono")String icono){
 

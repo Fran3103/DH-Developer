@@ -2,19 +2,19 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./assets/Components/Header";
 
 import Home from "./assets/Page/Home";
-import Hoteles from "./assets/Page/Hoteles";
-import Casas from "./assets/Page/Casas";
-import Departamentos from "./assets/Page/Departamentos";
 import Footer from "./assets/Components/Footer";
-import Detalle from "./assets/Page/Detalle";
-import Admin from "./assets/Page/Admin";
-import Productos from "./assets/Page/Productos";
+import Detalle from "./assets/features/products/components/Detalle";
+import Admin from "./assets/features/admin/Admin";
+import Productos from "./assets/features/products/components/Productos";
 import { UserProvider } from "./assets/Context/UseContext";
 import "./App.css";
-import Perfil from "./assets/Page/Perfil";
-import { Usuarios } from "./assets/Components/Usuarios";
-import { ProductosAdmin } from "./assets/Components/ProductosAdmin";
-import { AdministraCaracteristicas } from "./assets/Components/AdministraCaracteristicas";
+import Perfil from "./assets/features/usuarios/Perfil";
+import { Usuarios } from "./assets/features/usuarios/Usuarios";
+import { ProductosAdmin } from "./assets/features/products/admin/ProductosAdmin";
+import { AdministraCaracteristicas } from "./assets/features/caracteristicas/admin/AdministraCaracteristicas";
+import VerificarCuenta from "./assets/Page/VarificacionCuenta";
+import ProductListPage from "./assets/features/products/components/ProductListPage";
+
 
 function App() {
   return (
@@ -24,12 +24,11 @@ function App() {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Hoteles" element={<Hoteles />} />
-            <Route path="/Casas" element={<Casas />} />
-            <Route path="/Departamentos" element={<Departamentos />} />
             <Route path="/:catagory/:id" element={<Detalle />} />
-            <Route path="/productos" element={<Productos />} />
+            <Route path="/productos/" element={<Productos />} />
+            <Route path="/productos/filter" element={<ProductListPage />} />
             <Route path="/perfil" element={<Perfil />} />
+            <Route path="/verificar/*" element={<VerificarCuenta />} />
             <Route path="/admin/*" element={<Admin />} >
               <Route path="productos" element={<ProductosAdmin />}/>
               <Route index element={<ProductosAdmin />}/>

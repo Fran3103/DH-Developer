@@ -2,9 +2,13 @@ package com.EasyStay.EasyStay.Auth;
 
 import com.EasyStay.EasyStay.Entities.Role;
 import com.EasyStay.EasyStay.Entities.Usuarios;
+import com.EasyStay.EasyStay.Entities.VerificacionToken;
 import com.EasyStay.EasyStay.Repositories.IUsuarioRepository;
+import com.EasyStay.EasyStay.Services.EmailService;
+import com.EasyStay.EasyStay.Services.VerificacionTokenService;
 import com.EasyStay.EasyStay.configuration.JwtService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -27,41 +31,19 @@ public class AuthenticationService {
 
     private final JwtService jwtService;
 
+    @Autowired
+    private VerificacionTokenService tokenService;
+
+    @Autowired
+    private EmailService emailService;
+
     private final AuthenticationManager authenticationManager;
     public  AuthenticationResponse allUsers;
 
     public List<Usuarios> allUsers(){
         return usuarioRepository.findAll();
-    } ;
+    }
 
-
-    /*public AuthenticationResponse register(RegisterRequest request){
-
-        var existingUser = usuarioRepository.findByEmail(request.getEmail());
-        if (existingUser.isPresent()) {
-            // Lanza una excepción si el usuario ya existe
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "El usuario ya está registrado con este correo.");
-        }
-
-
-
-        var user = Usuarios.builder()
-                .name(request.getFirstname())
-                .lastName(request.getLastname())
-                .email(request.getEmail())
-                .password(passwordEncoder.encode(request.getPassword()))
-                .role(Role.USER)
-                .build();
-
-        usuarioRepository.save(user);
-
-        var jwt = jwtService.generateToken(user);
-        return AuthenticationResponse.builder()
-                .token(jwt)
-                .name(user.getName())
-                .lastName(user.getLastName())
-                .build();
-    }*/
     public AuthenticationResponse register(RegisterRequest request) {
         var existingUser = usuarioRepository.findByEmail(request.getEmail());
         if (existingUser.isPresent()) {
@@ -75,8 +57,16 @@ public class AuthenticationService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.USER)
                 .build();
-
         usuarioRepository.save(user);
+
+
+        VerificacionToken token = tokenService.createTokenForUser(user);
+
+        String verificationLink = "http://localhost:5173/verificar?token=" + token.getToken();
+        emailService.sendVerificationEmail(user.getEmail(),user.getName(), verificationLink);
+
+
+
 
         var jwt = jwtService.generateToken(user);
         return AuthenticationResponse.builder()

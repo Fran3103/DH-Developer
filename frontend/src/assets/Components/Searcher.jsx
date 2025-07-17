@@ -1,5 +1,5 @@
 import { FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
-import '../Css/search.css'
+import '../styles/search.css';
 
 const Searcher = () => {
 

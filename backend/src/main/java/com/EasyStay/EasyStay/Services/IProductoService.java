@@ -1,7 +1,10 @@
 package com.EasyStay.EasyStay.Services;
 
 
+import com.EasyStay.EasyStay.Dtos.CategoriaCount;
 import com.EasyStay.EasyStay.Entities.Producto;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -28,4 +31,12 @@ public interface IProductoService {
 
     List<Producto> findByCategory(String category);
     List<Producto> findByCategoryIgnoreCase(String category);
+
+    List<CategoriaCount> getCountCategory();
+
+    Page<Producto> findByFilters(List<String> category,
+                                 Double minPrice, Double maxPrice,
+                                 String location,
+                                 List<Long> caracteristicasId,
+                                 Pageable page);
 }
