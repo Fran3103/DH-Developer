@@ -92,13 +92,13 @@ const ProductListPage = () => {
   const totalPaginas = Math.ceil(products.length / productosPorPagina);
 
   return (
-    <div className="flex flex-col md:flex-row gap-4 mt-[80px] md:mt-[120px]">
+    <div className="flex flex-col md:flex-row gap-4 mt-[80px] md:mt-[120px] p-3 md:p-0">
       <aside>
         <CategoriesSidebar categories={categories} features={features} />
       </aside>
       <main>
-        <div className="flex justify-between items-center mb-4 w-full">
-          <h2 className="text-lg font-semibold w-full">
+        <div className="flex  items-center mb-4 ">
+          <h2 className="text-lg font-semibold w-full ">
             Filtrado:{" "}
             <span className="text-sm text-gray-600">
               {category.length || feat.length > 0
@@ -115,10 +115,10 @@ const ProductListPage = () => {
             className={
               category.length === 0 && feat.length === 0
                 ? "hidden"
-                : " w-20 text-center text-sm text-red-600 hover:underline"
+                : " w-28 text-center text-sm text-red-600 hover:underline"
             }
           >
-            Borrar
+            Limpiar filtros
           </button>
         </div>
         <p className="text-sm text-gray-600  mb-4">
