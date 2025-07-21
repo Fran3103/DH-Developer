@@ -40,7 +40,7 @@ const Categorias = () => {
             Categorias
           </h1>
 
-          <span><IoFilter className="text-xl"/></span>
+          <Link to={'/productos/filter?'} className="text-xs w-20 flex gap-2">ver más<IoFilter className="text-xl"/></Link>
         </div>
         <div className="flex  flex-col justify-between items-center  w-full m-auto gap-3  max-w-[1240px] xs:flex-wrap xs:flex-row xs:gap-3 sm:flex-row  sm:gap-3">
           {categorias.map(({categoria, imagen, cantidad}) => {
