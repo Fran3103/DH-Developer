@@ -14,6 +14,7 @@ import { ProductosAdmin } from "./assets/features/products/admin/ProductosAdmin"
 import { AdministraCaracteristicas } from "./assets/features/caracteristicas/admin/AdministraCaracteristicas";
 import VerificarCuenta from "./assets/Page/VarificacionCuenta";
 import ProductListPage from "./assets/features/products/components/ProductListPage";
+import { AdministraCategoria } from "./assets/features/categorias/admin/AdministraCategoria";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               <Route index element={<ProductosAdmin />}/>
               <Route path="usuarios" element={<Usuarios />}/>
               <Route path="administrar caracteristicas" element={<AdministraCaracteristicas />}/>
+              <Route path="agregar categorias" element={<AdministraCategoria />}/>
             </Route>
           </Routes>
         </div>

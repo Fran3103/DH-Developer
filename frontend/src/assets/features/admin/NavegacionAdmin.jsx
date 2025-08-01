@@ -15,7 +15,7 @@ export const NavegacionAdmin = () => {
       <h1 className="text-black pl-4 pt-3">Panel de Administrador </h1>
 
       <ul className="flex flex-col gap-6 mt-7 pl-4">
-      {["Productos", "Usuarios", "Administrar Caracteristicas"].map((route, index) => (
+      {["Productos", "Usuarios", "Administrar Caracteristicas","Agregar Categorias"].map((route, index) => (
           <li
             key={index}
             className={`w-full rounded-l p-2 transition-all ${

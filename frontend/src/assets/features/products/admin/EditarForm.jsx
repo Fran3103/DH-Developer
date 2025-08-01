@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import { updateProducto } from "../productoService";
+import { getCategorias } from "../../categorias/CategoriaService";
 
 // eslint-disable-next-line react/prop-types
 const EditarForm = ({ cerrar, confirmar, datosEditar }) => {
@@ -8,7 +9,7 @@ const EditarForm = ({ cerrar, confirmar, datosEditar }) => {
   const [formData, setFormData] = useState({
     id: "",
     name: "",
-    category: "",
+    categoria: "",
     location: "",
     price: "",
     rating: "",
@@ -28,21 +29,35 @@ const EditarForm = ({ cerrar, confirmar, datosEditar }) => {
     datosEditar.caracteristicas || []
   );
 
+  const [todasCategorias, setTodasCategorias] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:3000/caracteristicas")
       .then((resp) => resp.json())
       .then((data) => setTodasCaracteristicas(data));
   }, []);
 
+  useEffect(() => async () => {
+    try {await getCategorias()
+      .then((res) => setTodasCategorias(res))
+      }
+      catch (error) {
+        console.error("Error al obtener categorías:", error);
+      }
+
+    },[]);
+    
+    console.log("Datos del producto a editar:", todasCategorias);
   useEffect(() => {
     if (datosEditar?.caracteristicas) {
       setCaracteristicasActuales(datosEditar.caracteristicas);
     }
+
     if (datosEditar) {
       setFormData({
         id: datosEditar.id,
         name: datosEditar.name,
-        category: datosEditar.category,
+        categoria: datosEditar.categorias?.[0].id || "",
         location: datosEditar.location,
         address: datosEditar.address,
         price: datosEditar.price,
@@ -111,7 +126,7 @@ const EditarForm = ({ cerrar, confirmar, datosEditar }) => {
     const data = new FormData();
     data.append("id", formData.id);
     data.append("name", formData.name);
-    data.append("category", formData.category);
+    data.append("categoria", formData.categoria);
     data.append("location", formData.location);
     data.append("address", formData.address);
     data.append("price", formData.price);
@@ -128,7 +143,7 @@ const EditarForm = ({ cerrar, confirmar, datosEditar }) => {
     }
 
     try {
-      await updateProducto(data);
+      await updateProducto(formData.id,data);
       setEstado("Producto actualizado con éxito");
       setEnviado(true);
       confirmar();
@@ -137,6 +152,7 @@ const EditarForm = ({ cerrar, confirmar, datosEditar }) => {
         setError("El producto no fue encontrado.");
       } else {
         setError("Error al actualizar el producto");
+        console.log("lo que si se envio: ", [...data.entries()]);
       }
       setEnviado(true);
     } finally {
@@ -177,15 +193,16 @@ const EditarForm = ({ cerrar, confirmar, datosEditar }) => {
           <div className="flex w-full justify-between items-center">
             <label className="block mb-1">Categoría:</label>
             <select
-              name="category"
+              name="categoria"
               onChange={handleChange}
-              value={formData.category}
+              value={formData.categoria || ""}
               className="w-2/3 border px-3 py-2 rounded"
             >
-              <option value="">Seleccionar Categoria</option>
-              <option value="Casas">Casas</option>
-              <option value="Departamentos">Departamentos</option>
-              <option value="Hoteles">Hoteles</option>
+             { todasCategorias.map((categoria) => (
+                <option key={categoria.id} value={categoria.id}>
+                  {categoria.name}
+                </option>))}
+          
             </select>
           </div>
           <div className="flex w-full justify-between">

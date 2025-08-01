@@ -6,7 +6,7 @@ const Recomendado = ({id, category, name, location, rating, quality, price, imag
 
 
 // eslint-disable-next-line react/prop-types
-const imageUrl = `http://localhost:3000${images[0].url}`;
+  const imageUrl = `http://localhost:3000${images[0].url}` ;
   return (
     <div className='m-auto mt-3 md:mt-4 mb-[50px]'>
       <div className='m-auto w-full max-w-[1240px] p-3'>

@@ -34,8 +34,8 @@ const ProductListPage = () => {
 
             content.forEach((producto) => {
               // Desestructuramos el producto para obtener categoría y características
-              const cat = producto.category;
-
+              const cat = producto.categorias[0]?.name; // Asumimos que la primera categoría es la principal
+         
               if (!catMap.has(cat)) {
                 // Si no existe, lo agregamos con cantidad 1
                 catMap.set(cat, { categoria: cat, cantidad: 1 }); // Aquí usamos 'categoria' como clave
@@ -81,7 +81,7 @@ const ProductListPage = () => {
 
   // paginacion
 
-  const productosPorPagina = 20;
+  const productosPorPagina = 12;
 
   const indiceUltimoProducto = paginaActual * productosPorPagina;
   const indicePrimerProducto = indiceUltimoProducto - productosPorPagina;
@@ -92,7 +92,7 @@ const ProductListPage = () => {
   const totalPaginas = Math.ceil(products.length / productosPorPagina);
 
   return (
-    <div className="flex flex-col md:flex-row gap-4 mt-[80px] md:mt-[120px] p-3 md:p-0">
+    <div className="flex flex-col md:flex-row gap-4 mt-[80px] md:mt-[120px]  md:p-0 m-auto w-full max-w-[1240px] p-3">
       <aside>
         <CategoriesSidebar categories={categories} features={features} />
       </aside>
