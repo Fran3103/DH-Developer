@@ -2,6 +2,6 @@ package com.EasyStay.EasyStay.Dtos;
 
 public interface CategoriaCount {
 
-    String getCategoria();
+    String getCategory();
     long getTotal();
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Casas",
+    "description": "ninguna",
+    "image": "/imagesCategorias/casa.jpg"
+  },
+  {
+      "id": 2,
+      "name": "Hoteles",
+      "description": "ninguna",
+      "image": "/imagesCategorias/hotel.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Departamentos",
+    "description": "ninguna",
+    "image": "/imagesCategorias/departamento.jpg"
+  }
+]

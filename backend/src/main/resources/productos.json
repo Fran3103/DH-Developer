@@ -3,7 +3,7 @@
   {
     "id": 1,
     "name": "Lola Barracas",
-    "category": "Casas",
+    "categorias": [1],
     "location": "Barracas",
     "address":"1539 Isabel la Católica, 1163 Buenos Aires, Argentina ",
     "price": 50000.0,
@@ -17,37 +17,12 @@
       { "url": "/images/casa_1_4.jpg" },
       { "url": "/images/casa_1_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26]
   },
   {
     "id": 2,
     "name": "Great Loft Nunez",
-    "category": "Casas",
+    "categorias": [1],
     "location": "Nuñes",
     "address":"Nuñez 2842, Nuñez, 1429 Buenos Aires, Argentina",
     "price": 40000.0,
@@ -60,37 +35,12 @@
       { "url": "/images/casa_2_3.jpg" },
       { "url": "/images/casa_2_4.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26]
   },
   {
     "id": 3,
     "name": "Casa PalermoSoho",
-    "category": "Casas",
+    "categorias":  [1],
     "location": "Palermo",
     "address":"1864 Uriarte, Palermo, 1414 Buenos Aires, Argentina",
     "price": 60000.0,
@@ -105,37 +55,12 @@
       { "url": "/images/casa_3_5.jpg" },
       { "url": "/images/casa_3_6.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,22,30,11,15,26]
   },
   {
     "id": 4,
     "name": "Casa Soho",
-    "category": "Casas",
+    "categorias": [1],
     "location": "Palermo",
     "address": "4500 Honduras, Palermo, Buenos Aires",
     "price": 50000.0,
@@ -149,37 +74,12 @@
       { "url": "/images/casa_4_4.jpg" },
       { "url": "/images/casa_4_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26,29]
   },
   {
     "id": 5,
     "name": "Palermo Hollywood ",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Palermo",
     "address":"Bonpland 2269 6B Palermo Hollywood, Palermo, C1431 Buenos Aires, Argentina",
     "price": 50000.0,
@@ -193,37 +93,12 @@
       { "url": "/images/departamento_1_4.jpg" },
       { "url": "/images/departamento_1_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,13,20]
   },
   {
     "id": 6,
     "name": "En el corazón de la ciudad!",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Monserrat",
     "address":" 187 Bolívar, Monserrat, 1066 Buenos Aires, Argentina",
     "price": 50000.0,
@@ -237,37 +112,12 @@
       { "url": "/images/departamento_2_4.jpg" },
       { "url": "/images/departamento_2_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,3,8,11,18,21]
   },
   {
     "id": 7,
     "name": "Palermo Vibes",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Palermo",
     "address":"2386 Fray Justo Santa María de Oro, Palermo, 1425 Buenos Aires, Argentina",
     "price": 50000.0,
@@ -280,37 +130,12 @@
       { "url": "/images/departamento_3_3.jpg" },
       { "url": "/images/departamento_3_4.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,12,19,20]
   },
   {
     "id": 8,
     "name": "Estudio Deco Armani Recoleta",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Recoleta",
     "address":"1999 Guido, Recoleta, C1119AAC Buenos Aires, Argentina",
     "price": 50000.0,
@@ -323,37 +148,12 @@
       { "url": "/images/departamento_4_3.jpg" },
       { "url": "/images/departamento_4_4.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,12,24,29]
   },
   {
     "id": 9,
     "name": "Rent Furnished",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Recoleta",
     "address":"1428 Ecuador, Recoleta, 1425 Buenos Aires, Argentina",
     "price": 50000.0,
@@ -367,37 +167,12 @@
       { "url": "/images/departamento_5_4.jpg" },
       { "url": "/images/departamento_5_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,3,4,9,8,11,15,26]
   },
   {
     "id": 10,
     "name": "UNDICI Republica de la Boca",
-    "category": "Hoteles",
+    "categorias": [2],
     "location": "La Boca ",
     "address":"923 Brandsen, La Boca, 1161 Buenos Aires, Argentina",
     "price": 50000.0,
@@ -411,37 +186,12 @@
       { "url": "/images/hotel_1_4.jpg" },
       { "url": "/images/hotel_1_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15]
   },
   {
     "id": 11,
     "name": "Hotel Santa Cruz",
-    "category": "Hoteles",
+    "categorias": [2],
     "location": "Flores",
     "address":"2858 Bogotá 2858, Flores, 1406 Buenos Aires, Argentina",
     "price": 50000.0,
@@ -455,37 +205,12 @@
       { "url": "/images/hotel_2_4.jpg" },
       { "url": "/images/hotel_2_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,9,11,15,26]
   },
   {
     "id": 12,
     "name": "We The People Palermo Hollywood",
-    "category": "Hoteles",
+    "categorias":[2],
     "location": "Palermo",
     "address":" Soler 5975, Palermo, 1425 Buenos Aires, Argentina",
     "price": 50000.0,
@@ -499,37 +224,12 @@
       { "url": "/images/hotel_3_4.jpg" },
       { "url": "/images/hotel_3_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,12,22]
   },
   {
     "id": 13,
     "name": "Up América Plaza",
-    "category": "Hoteles",
+    "categorias": [2],
     "location": "Balvanera",
     "address":"Bartolome Mitre, 1744, C1037ABH Buenos Aires, Argentina ",
     "price": 50000.0,
@@ -543,37 +243,12 @@
       { "url": "/images/hotel_4_4.jpg" },
       { "url": "/images/hotel_4_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,12,8,11,15,26]
   },
   {
     "id": 14,
     "name": "Hotel 6 de Octubre",
-    "category": "Hoteles",
+    "categorias": [2],
     "location": "Balvanera",
     "address":"2854 Avenida Independencia, Balvanera, 1225 Buenos Aires, Argentina",
     "price": 48000.0,
@@ -587,37 +262,12 @@
       { "url": "/images/hotel_5_4.jpg" },
       { "url": "/images/hotel_5_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26]
   },
   {
     "id": 15,
     "name": "Casa Boutique ",
-    "category": "Casas",
+    "categorias": [1],
     "location": "San Justo",
     "address":"Venezuela 2744, B1754JSN, 1754 Buenos Aires, Argentina ",
     "price": 62000.0,
@@ -631,37 +281,12 @@
       { "url": "/images/casa_5_4.jpg" },
       { "url": "/images/casa_5_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26]
   },
   {
     "id": 16,
     "name": "Casa La Reserva",
-    "category": "Casas",
+    "categorias": [1],
     "location": "Palermo",
     "address": " HERNAN CERIANE CERNADAS, 1746 Buenos Aires, Argentina",
     "price": 70000.0,
@@ -675,37 +300,12 @@
       { "url": "/images/casa_6_4.jpg" },
       { "url": "/images/casa_6_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11]
   },
   {
     "id": 17,
     "name": "SomosHost ",
-    "category": "Casas",
+    "categorias": [1],
     "location": "Palermo",
     "address":"Ángel Justiniano Carranza 1546, Palermo, 1414 Buenos Aires, Argentina",
     "price": 55000.0,
@@ -718,37 +318,12 @@
       { "url": "/images/casa_7_3.jpg" },
       { "url": "/images/casa_7_4.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,11,15,26]
   },
   {
     "id": 18,
     "name": "Casa Grande",
-    "category": "Casas",
+    "categorias": [1],
     "location": "Palermo",
     "address": " Costa Rica 4417, Palermo, 1414 Buenos Aires, Argentina",
     "price": 63000.0,
@@ -761,37 +336,12 @@
       { "url": "/images/casa_8_3.jpg" },
       { "url": "/images/casa_8_4.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26,14]
   },
   {
     "id": 19,
     "name": "Fliphaus",
-    "category": "Casas",
+    "categorias": [1],
     "location": "Palermo",
     "address":"Armenia 1277, Palermo, 1414 Buenos Aires, Argentina",
     "price": 68000.0,
@@ -805,37 +355,12 @@
       { "url": "/images/casa_9_4.jpg" },
       { "url": "/images/casa_9_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26]
   },
   {
     "id": 20,
     "name": "Lux 3 Bd Palermo H",
-    "category": "Casas",
+    "categorias": [1],
     "location": "Palermo",
     "address":"Honduras 5766, Palermo, 1414 Buenos Aires, Argentina",
     "price": 64000.0,
@@ -848,37 +373,12 @@
       { "url": "/images/casa_10_3.jpg" },
       { "url": "/images/casa_10_4.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,3,4,6]
   },
   {
     "id": 21,
     "name": "Curio Collection by Hilton",
-    "category": "Hoteles",
+    "categorias": [2],
     "location": "San Telmo",
     "address":" Anselmo Aieta 1069, San Telmo, C1103AAA Buenos Aires, Argentina",
     "price": 52000.0,
@@ -892,37 +392,12 @@
       { "url": "/images/hotel_6_4.jpg" },
       { "url": "/images/hotel_6_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,5,6]
   },
   {
     "id": 22,
     "name": "M Concept Hotel",
-    "category": "Hoteles",
+    "categorias": [2],
     "location": "Monserrat",
     "address":"Moreno 606, Monserrat, 1091 Buenos Aires, Argentina",
     "price": 53000.0,
@@ -936,37 +411,12 @@
       { "url": "/images/hotel_7_4.jpg" },
       { "url": "/images/hotel_7_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26]
   },
   {
     "id": 23,
     "name": "Cyan Recoleta Hotel",
-    "category": "Hoteles",
+    "categorias": [2],
     "location": "Recoleta",
     "address":"Junin 1743, Recoleta, C1113AAR Buenos Aires, Argentina",
     "price": 55000.0,
@@ -980,37 +430,12 @@
       { "url": "/images/hotel_8_4.jpg" },
       { "url": "/images/hotel_8_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26,10,9]
   },
   {
     "id": 24,
     "name": "Live Soho Boutique",
-    "category": "Hoteles",
+    "categorias": [2],
     "location": "Palermo",
     "address":"4470 Charcas, Palermo, 1425 Buenos Aires, Argentina",
     "price": 56000.0,
@@ -1024,37 +449,12 @@
       { "url": "/images/hotel_9_4.jpg" },
       { "url": "/images/hotel_9_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26]
   },
   {
     "id": 25,
     "name": "Hotel Goya BA",
-    "category": "Hoteles",
+    "categorias":2,
     "location": "CABA",
     "address":" Suipacha 750, 1008 Buenos Aires, Argentina",
     "price": 57000.0,
@@ -1068,37 +468,12 @@
       { "url": "/images/hotel_10_4.jpg" },
       { "url": "/images/hotel_10_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26,17]
   },
   {
     "id": 26,
     "name": "Top Rentals Deheza",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Nuñez",
     "address":"1640 Deheza, Nuñez, 1429 Buenos Aires, Argentina",
     "price": 58000.0,
@@ -1112,37 +487,12 @@
       { "url": "/images/departamento_6_4.jpg" },
       { "url": "/images/departamento_6_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,20]
   },
   {
     "id": 27,
     "name": "Nuñez PH Premium",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Nuñez",
     "address":"2956 Amenábar Departamento C, Nuñez, 1428 Buenos Aires, Argentina",
     "price": 59000.0,
@@ -1161,37 +511,12 @@
       { "url": "/images/departamento_11_4.jpg" },
       { "url": "/images/departamento_11_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26]
   },
   {
     "id": 28,
     "name": " Modern Flat",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Nuñez",
     "address":"2830 Montañeses Apartemento 1, Nuñez, 1429 Buenos Aires, Argentina",
     "price": 60000.0,
@@ -1205,37 +530,12 @@
       { "url": "/images/departamento_8_4.jpg" },
       { "url": "/images/departamento_8_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15]
   },
   {
     "id": 29,
     "name": "Ibera apartment",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Nuñez",
     "address":"Iberá, Nuñez, 1429 Buenos Aires, Argentina",
     "price": 61000.0,
@@ -1249,37 +549,12 @@
       { "url": "/images/departamento_9_4.jpg" },
       { "url": "/images/departamento_9_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,5,6]
   },
   {
     "id": 30,
     "name": "Hermoso departamento ",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Nuñez",
     "address":" 3355 Avenida Cabildo 6b, Nuñez, 1429 Buenos Aires, Argentina",
     "price": 62000.0,
@@ -1293,37 +568,12 @@
       { "url": "/images/departamento_10_4.jpg" },
       { "url": "/images/departamento_10_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,23,21,20]
   },
   {
     "id": 31,
     "name": "Hermoso Departamento",
-    "category": "Departamentos",
+    "categorias": [3],
     "location": "Palermo",
     "address":" 1224 Gascón, Palermo, 1181 Buenos Aires, Argentina",
     "price": 62000.0,
@@ -1337,32 +587,7 @@
       { "url": "/images/departamento_11_4.jpg" },
       { "url": "/images/departamento_11_5.jpg" }
     ],
-    "caracteristicas": [
-      {
-        "id": 1,
-        "name": "Wi-Fi gratuito"
-      },
-      {
-        "id": 2,
-        "name": "Estacionamiento gratuito"
-      },
-      {
-        "id": 3,
-        "name": "Aire acondicionado"
-      },
-      {
-        "id": 4,
-        "name": "Cocina equipada"
-      },
-      {
-        "id": 5,
-        "name": "Terraza"
-      },
-      {
-        "id": 6,
-        "name": "TV por cable/satélite"
-      }
-    ]
+    "caracteristicas": [1,2,8,11,15,26]
   }
 
 

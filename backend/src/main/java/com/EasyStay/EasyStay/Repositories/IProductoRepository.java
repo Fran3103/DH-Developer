@@ -13,14 +13,15 @@ import java.util.List;
 public interface IProductoRepository extends JpaRepository<Producto, Long>, JpaSpecificationExecutor<Producto> {
 
     boolean existsByName(String name);
-    List<Producto> findByCategory(String category);
-    List<Producto> findByCategoryIgnoreCase(String category);
+    List<Producto> findByCategoriasName(String name);
+    List<Producto> findByCategoriasNameIgnoreCase(String name);
 
     @Query("""
-  SELECT p.category   AS categoria,
+  SELECT c.name  AS category,
          COUNT(p)     AS total
     FROM Producto p
-   GROUP BY p.category
+    JOIN p.categorias c
+   GROUP BY c.name
   """)
     List<CategoriaCount> countByCategory();
 
