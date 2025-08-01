@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { IoFilter } from "react-icons/io5";
 import { useEffect, useState } from "react";
-import { getCategorias } from "../categorias/CategoriaService"; // Asegúrate de que esta ruta sea correcta
+import { getCategorias } from "../categorias/CategoriaService"
 
 const Categorias = () => {
   const [datos, setDatos] = useState([]);
