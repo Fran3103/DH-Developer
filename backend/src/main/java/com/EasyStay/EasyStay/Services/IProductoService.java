@@ -29,8 +29,8 @@ public interface IProductoService {
     List<Producto> findAll();
     boolean existsByName(String name);
 
-    List<Producto> findByCategory(String category);
-    List<Producto> findByCategoryIgnoreCase(String category);
+    List<Producto> findByCategory(String categorias);
+    List<Producto> findByCategoryIgnoreCase(String categorias);
 
     List<CategoriaCount> getCountCategory();
 

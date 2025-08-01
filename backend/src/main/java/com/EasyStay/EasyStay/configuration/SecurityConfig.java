@@ -34,6 +34,8 @@ public class SecurityConfig {
                 .requestMatchers("/images/**").permitAll()
                 .requestMatchers("/usuarios/**").permitAll()
                 .requestMatchers("/caracteristicas/**").permitAll()
+                .requestMatchers("/categorias/**").permitAll()
+                .requestMatchers("/imagesCategorias/**").permitAll()
                 .requestMatchers("/auth/**","/error").permitAll()
                 .requestMatchers("/h2-console/**").permitAll()
                 .requestMatchers("/admin/**").hasRole("usuario")

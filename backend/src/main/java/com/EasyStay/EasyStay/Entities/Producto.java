@@ -3,6 +3,7 @@ package com.EasyStay.EasyStay.Entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -19,7 +20,6 @@ public class Producto {
 
     private String name;
 
-    private String category;
 
     private String location;
 
@@ -52,12 +52,21 @@ public class Producto {
             inverseJoinColumns = @JoinColumn(name = "caracteristica_id"))
     private List<Caracteristicas> caracteristicas = new ArrayList<>(); // Relación con Caracteristicas
 
+
+    @JsonProperty("categorias")
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name = "producto_categoria",
+            joinColumns = @JoinColumn(name = "producto_id"),
+            inverseJoinColumns = @JoinColumn(name = "categoria_id"))
+    private List<Categorias> categorias = new ArrayList<>();
+
     public Producto() {
     }
 
-    public Producto(String name, String category, String location, Double price, Integer rating, String quality, String address, String description, List<ImagesArray> images) {
+    public Producto(String name, List<Categorias> categorias, String location, Double price, Integer rating, String quality, String address, String description, List<ImagesArray> images) {
         this.name = name;
-        this.category = category;
+        this.categorias = categorias;
         this.location = location;
         this.price = price;
         this.rating = rating;
@@ -67,7 +76,7 @@ public class Producto {
         this.images = images;
     }
 
-    public Producto(List<ImagesArray> images, String description, String address, String quality, Integer rating, Double price, String location, String category, String name, long id) {
+    public Producto(List<ImagesArray> images, String description, String address, String quality, Integer rating, Double price, String location, List<Categorias> categorias, String name, long id) {
         this.images = images;
         this.description = description;
         this.address = address;
@@ -75,7 +84,7 @@ public class Producto {
         this.rating = rating;
         this.price = price;
         this.location = location;
-        this.category = category;
+        this.categorias = categorias;
         this.name = name;
         this.id = id;
     }
@@ -96,12 +105,12 @@ public class Producto {
         this.name = name;
     }
 
-    public String getCategory() {
-        return category;
+    public List<Categorias> getCategorias() {
+        return categorias;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setCategorias(List<Categorias> categorias) {
+        this.categorias = categorias;
     }
 
     public String getLocation() {

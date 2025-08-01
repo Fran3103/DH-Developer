@@ -2,10 +2,12 @@ package com.EasyStay.EasyStay.Controllers;
 
 import com.EasyStay.EasyStay.Dtos.CategoriaCount;
 import com.EasyStay.EasyStay.Entities.Caracteristicas;
+import com.EasyStay.EasyStay.Entities.Categorias;
 import com.EasyStay.EasyStay.Entities.ImagesArray;
 import com.EasyStay.EasyStay.Entities.Producto;
 import com.EasyStay.EasyStay.Repositories.IImagesRepository;
 import com.EasyStay.EasyStay.Services.ICaracteristicasService;
+import com.EasyStay.EasyStay.Services.ICategoriaService;
 import com.EasyStay.EasyStay.Services.IImagesServices;
 import com.EasyStay.EasyStay.Services.IProductoService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -20,6 +22,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,15 +37,19 @@ public class ProductosController {
     private final IImagesServices iImagesServices;
     private final IImagesRepository imagenesRepository;
     private  final ICaracteristicasService caracteristicasService;
-
+    private  final ICategoriaService categoriaService;
 
     @Autowired
-    public ProductosController(IProductoService productoService, IImagesServices iImagesServices, IImagesRepository imagenesRepository, ICaracteristicasService caracteristicasService) {
+    public ProductosController(IProductoService productoService, IImagesServices iImagesServices, IImagesRepository imagenesRepository, ICaracteristicasService caracteristicasService, ICategoriaService categoriaService) {
         this.productoService = productoService;
         this.iImagesServices = iImagesServices;
         this.imagenesRepository = imagenesRepository;
         this.caracteristicasService = caracteristicasService;
+        this.categoriaService = categoriaService;
     }
+
+
+
 
     @GetMapping("/{id}")
     public ResponseEntity<Producto> findById(@PathVariable Long id) {
@@ -90,14 +97,14 @@ public class ProductosController {
     @PostMapping
     public ResponseEntity<?> save(
             @RequestParam("name") String name,
-            @RequestParam("category") String category,
+            @RequestParam("categoria") Long categoria,
             @RequestParam(value = "location", required = false) String location,
             @RequestParam("address") String address,
             @RequestParam(value = "description", required = false) String description,
             @RequestParam("price") Double price,
             @RequestParam(value = "rating", required = false) Integer rating,
             @RequestParam(value = "quality", required = false) String quality,
-            @RequestParam("caracteristicas") String caracteristicas,
+            @RequestParam(value = "caracteristicas", required = false) List<Long> caracteristicas,
             @RequestParam(value = "files" ) MultipartFile[] files) {
 
         // Verifica si ya existe un producto con el mismo nombre
@@ -106,32 +113,31 @@ public class ProductosController {
         }
 
 
-
+        List<Caracteristicas> feats = caracteristicasService.findAllIds(caracteristicas);
         // Primero, guarda el producto en la base de datos
 
         Producto producto = new Producto();
 
         producto.setName(name);
-        producto.setCategory(category);
         producto.setLocation(location);
         producto.setAddress(address);
         producto.setPrice(price);
         producto.setRating(rating);
         producto.setQuality(quality);
         producto.setDescription(description);
+        producto.setCaracteristicas(feats);
 
-
-
-        ObjectMapper mapper = new ObjectMapper();
-        List<Long> caracteristicasIds;
+       // ObjectMapper mapper = new ObjectMapper();
+/*
+        List<Long> categorias;
         try {
-            caracteristicasIds = mapper.readValue(caracteristicas, new TypeReference<List<Long>>() {});
+            categorias = mapper.readValue(categoria.toString(), new TypeReference<List<Long>>() {});
         } catch (JsonProcessingException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error al procesar las características");
-        }
+        }*/
         // Luego, guarda las imágenes relacionadas con el producto
-        List<Caracteristicas> caracteristicasList = caracteristicasService.findAllIds(caracteristicasIds);
-        producto.setCaracteristicas(caracteristicasList);
+        Optional<Categorias> categoriasList = categoriaService.findById(categoria);
+        producto.setCategorias(categoriasList.stream().toList());
         productoService.save(producto);
         List<ImagesArray> images = new ArrayList<>();
         for (MultipartFile file : files) {
@@ -152,11 +158,11 @@ public class ProductosController {
     }
 
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<String> update(
-            @RequestParam("id") Long id,
+            @PathVariable("id") Long id,
             @RequestParam("name") String name,
-            @RequestParam("category") String category,
+            @RequestParam("categoria") Long categoria,
             @RequestParam("location") String location,
             @RequestParam("address") String address,
             @RequestParam("price") Double price,
@@ -173,25 +179,30 @@ public class ProductosController {
         } catch (JsonProcessingException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error al procesar las características");
         }
+
         Optional<Producto> producto1 = productoService.findById(id);
 
+        Categorias cat = categoriaService.findById(categoria).orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND));
+
+        System.out.printf("Categoria", categoria);
         if (producto1.isPresent()) {
             Producto producto = producto1.get();
             producto.setName(name);
-            producto.setCategory(category);
             producto.setLocation(location);
             producto.setAddress(address);
             producto.setPrice(price);
             producto.setRating(rating);
             producto.setDescription(description);
             producto.setQuality(quality);
-
+            producto.setCategorias(new ArrayList<>(List.of(cat)));
 
             if (files != null && files.length > 0) {
                 // Procesa las imágenes y actualiza el producto si es necesario
             }
             List<Caracteristicas> caracteristicasList = caracteristicasService.findAllIds(caracteristicasIds);
             producto.setCaracteristicas(caracteristicasList);
+
+
             productoService.update(producto);
             return ResponseEntity.ok("Se actualizó el Producto correctamente");
         } else {
