@@ -40,6 +40,7 @@ export async function getProductoById(id) {
 
 // Crear un producto
 export async function crearProducto(formData) {
+  console.log("Datos enviados:", [...formData.entries()]);
   const response = await fetch("http://localhost:3000/productos", {
     method: "POST",
     body: formData,
@@ -55,10 +56,11 @@ export async function crearProducto(formData) {
 }
 
 // Actualizar producto
-export async function updateProducto(formData) {
-  const response = await fetch("http://localhost:3000/productos", {
+export async function updateProducto(id, data) {
+  console.log("Datos enviados:", [...data.entries()]);
+  const response = await fetch(`http://localhost:3000/productos/${id}`, {
     method: "PUT",
-    body: formData,
+    body: data,
   });
 
   if (!response.ok) {

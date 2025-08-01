@@ -24,8 +24,8 @@ export default function CategoriesSidebar({ categories, features }) {
     // Navegamos a la nueva URL con los parámetros actualizados
     // Esto recargará la página y aplicará los filtros
     navigate(`/productos/filter?${newParams.toString()}`);
-    console.log("Array", selectedArray);
   };
+
 
   return (
     <>

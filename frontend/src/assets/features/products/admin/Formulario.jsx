@@ -1,12 +1,13 @@
 // Formulario.js
 import { useEffect, useState } from "react";
 import { crearProducto } from "../productoService";
+import { getCategorias } from "../../categorias/CategoriaService";
 
 // eslint-disable-next-line react/prop-types
 const Formulario = ({ cerrar, confirmar }) => {
   const [formData, setFormData] = useState({
     name: "",
-    category: "",
+    categoria: "",
     location: "",
     address: "",
     price: "",
@@ -20,13 +21,25 @@ const Formulario = ({ cerrar, confirmar }) => {
   const [error, setError] = useState(null);
   const [todasCaracteristicas, setTodasCaracteristicas] = useState([]);
   const [caracteristicaActuales, setCaracteristicasActuales] = useState([]);
+  const [todasCategorias, setTodasCategorias] = useState([]);
+
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
+    const { name, value, files , type} = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: files ? files : value,
+      [name]: type === "file" ? Array.from(files) : value
     }));
   };
+
+useEffect(() => async () => {
+    try {await getCategorias()
+      .then((res) => setTodasCategorias(res))
+      }
+      catch (error) {
+        console.error("Error al obtener categorías:", error);
+      }
+  },[]);
+console.log("Datos del producto a editar:", todasCategorias);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,15 +48,14 @@ const Formulario = ({ cerrar, confirmar }) => {
 
     const data = new FormData();
     data.append("name", formData.name);
-    data.append("category", formData.category);
+    data.append("categoria", formData.categoria);
     data.append("location", formData.location);
     data.append("address", formData.address);
     data.append("price", formData.price);
     data.append("rating", formData.rating);
-    data.append(
-      "caracteristicas",
-      JSON.stringify(caracteristicaActuales.map((c) => c.id))
-    );
+    caracteristicaActuales.forEach((c) => {
+      data.append("caracteristicas", c.id);
+    });
     data.append("quality", formData.quality);
 
     if (formData.description === "") {
@@ -53,9 +65,7 @@ const Formulario = ({ cerrar, confirmar }) => {
     }
 
     if (formData.files && formData.files.length > 0) {
-      for (let i = 0; i < formData.files.length; i++) {
-        data.append("files", formData.files[i]);
-      }
+      formData.files.forEach(file => data.append("files", file));
     } else {
       // Si no hay archivos, puedes agregar una entrada vacía para 'files'
       data.append("files", new Blob()); // Esto asegura que el backend reciba algo, aunque vacío
@@ -72,6 +82,7 @@ const Formulario = ({ cerrar, confirmar }) => {
       }
     }
   };
+
   useEffect(() => {
     fetch("http://localhost:3000/caracteristicas")
       .then((resp) => resp.json())
@@ -102,7 +113,6 @@ const Formulario = ({ cerrar, confirmar }) => {
         caracteristicas: "",
       }));
     }
-
   };
 
   const handleQuitarCaracteristica = (id) => {
@@ -129,19 +139,23 @@ const Formulario = ({ cerrar, confirmar }) => {
               className="w-2/3 border px-3 py-2 rounded"
             />
           </div>
-          <div className="flex w-full justify-between items-center">
+         <div className="flex w-full justify-between items-center">
             <label className="block mb-1">Categoría:</label>
             <select
-              name="category"
+              name="categoria"
               onChange={handleChange}
-              value={formData.category}
-              label="categoria"
+              value={formData.categoria || ""}
               className="w-2/3 border px-3 py-2 rounded"
             >
-              <option value="">Seleccionar Categoria</option>
-              <option value="Casas">Casas</option>
-              <option value="Departamentos">Departamentos</option>
-              <option value="Hoteles">Hoteles</option>
+              <option value="">Categorias</option>
+             { todasCategorias.map((categoria) => (
+                <option key={categoria.id} value={categoria.id}>
+                  {categoria.id} - {categoria.name}
+                  
+                </option>))
+               
+                }
+          
             </select>
           </div>
           <div className="flex w-full justify-between">
