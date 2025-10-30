@@ -24,7 +24,7 @@ useEffect(() => async () => {
       }
   },[]);
 
-  console.log("categoriasTodas:", categoriasTodas);
+ 
 
 
   
@@ -48,9 +48,7 @@ datos.forEach(producto => {
 });
 
   const categorias = Array.from(categoriasMap.values());
-  console.log("categorias:", categorias);
 
-  console.log("categoriasTodas:", categoriasTodas);
 
   return (
     <div className="m-auto  mt-16 md:mt-20">
