@@ -1,15 +1,13 @@
 package com.EasyStay.EasyStay.Controllers;
 
+import com.EasyStay.EasyStay.Dtos.BookingDTO;
 import com.EasyStay.EasyStay.Dtos.CategoriaCount;
 import com.EasyStay.EasyStay.Entities.Caracteristicas;
 import com.EasyStay.EasyStay.Entities.Categorias;
 import com.EasyStay.EasyStay.Entities.ImagesArray;
 import com.EasyStay.EasyStay.Entities.Producto;
 import com.EasyStay.EasyStay.Repositories.IImagesRepository;
-import com.EasyStay.EasyStay.Services.ICaracteristicasService;
-import com.EasyStay.EasyStay.Services.ICategoriaService;
-import com.EasyStay.EasyStay.Services.IImagesServices;
-import com.EasyStay.EasyStay.Services.IProductoService;
+import com.EasyStay.EasyStay.Services.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -38,14 +36,16 @@ public class ProductosController {
     private final IImagesRepository imagenesRepository;
     private  final ICaracteristicasService caracteristicasService;
     private  final ICategoriaService categoriaService;
+    private final AvailabilityService availabilityService;
 
     @Autowired
-    public ProductosController(IProductoService productoService, IImagesServices iImagesServices, IImagesRepository imagenesRepository, ICaracteristicasService caracteristicasService, ICategoriaService categoriaService) {
+    public ProductosController(IProductoService productoService, IImagesServices iImagesServices, IImagesRepository imagenesRepository, ICaracteristicasService caracteristicasService, ICategoriaService categoriaService, AvailabilityService availabilityService) {
         this.productoService = productoService;
         this.iImagesServices = iImagesServices;
         this.imagenesRepository = imagenesRepository;
         this.caracteristicasService = caracteristicasService;
         this.categoriaService = categoriaService;
+        this.availabilityService = availabilityService;
     }
 
 
@@ -84,7 +84,7 @@ public class ProductosController {
     ){
         Page<Producto> filters = productoService.findByFilters(category, minPrice, maxPrice, location, caracteristicasIds, page);
         System.out.println("Filtro recibido → categories: "
-                + category + ", features: " + caracteristicasIds );
+                + category + ", features: " + caracteristicasIds + " Location: " + location);
         return ResponseEntity.ok(filters);
     }
 
@@ -216,4 +216,24 @@ public class ProductosController {
         productoService.delete(id);
         return ResponseEntity.ok("Se eliminó el Producto con el id: " + id);
     }
+
+
+    @GetMapping("/{id}/availability")
+    public ResponseEntity<?> getAvailability(@PathVariable Long id) {
+
+        // validación básica: ¿existe el producto?
+        if (productoService.findById(id).isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("Producto no encontrado");
+        }
+
+        try {
+            List<BookingDTO> booked = availabilityService.getBookedDatesForProduct(id);
+            return ResponseEntity.ok(booked);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("No se pudo obtener disponibilidad");
+        }
+    }
+
 }
