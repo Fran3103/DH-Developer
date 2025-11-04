@@ -4,13 +4,14 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 import { iconMap } from "../../../utils/iconMap";
 import "../../../styles/galeria.css";
 import Galeria from "../../../Components/Galeria";
+import AvailabilityCalendar from "../../reservas/Componentes/AvailabilityCalendar";
 const Detalle = () => {
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
   const [error, setError] = useState(null);
   const [galeria, setGaleria] = useState([]);
   const [mostrarGaleria, setMostrarGaleria] = useState(false);
-  
+
   useEffect(() => {
     const fetchProducto = async () => {
       try {
@@ -64,6 +65,9 @@ const Detalle = () => {
         </div>
       </div>
       <div className="m-auto max-w-[1240px] mt-2 p-4">
+        <div>
+          <AvailabilityCalendar Producto_id={id} />
+        </div>
         <div className=" max-w-96 m-auto md:max-w-[740px] lg:max-w-none relative">
           <div className="galeria ">
             {galeria.map((imagen, index) => {

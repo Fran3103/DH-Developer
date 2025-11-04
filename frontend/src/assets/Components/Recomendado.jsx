@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 
 // eslint-disable-next-line react/prop-types
-const Recomendado = ({id, category, name, location, rating, quality, price, images}) => {
+const Recomendado = ({id, name, location, rating, quality, price, images}) => {
 
 
 // eslint-disable-next-line react/prop-types
@@ -15,7 +15,7 @@ const Recomendado = ({id, category, name, location, rating, quality, price, imag
          
             
 
-          <Link key={id} to={`/${category}/${id}`}>
+          <Link key={id} to={`/producto/${id}`}>
                 <div className='w-72 h-72 rounded-lg shadow-lg hover:shadow-xl xs:w-44 sm:w-40 md:w-48 lg:w-56'>
                   <div>
                     <img src={imageUrl} alt={name} className='rounded-t-lg w-full h-40' />
