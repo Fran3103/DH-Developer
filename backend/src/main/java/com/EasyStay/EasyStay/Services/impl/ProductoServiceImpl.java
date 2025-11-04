@@ -100,9 +100,11 @@ public class ProductoServiceImpl implements IProductoService {
             spec = spec.and((root, query, cb) ->
                     cb.le(root.get("price"), maxPrice));
         }
-        if (location != null) {
+        if (location != null && !location.isBlank()) {
+            String q = "%" + location.trim().toLowerCase()+ "%";
             spec = spec.and((root, query, cb) ->
-                    cb.equal(root.get("location"), location));
+                    cb.like(cb.lower(root.get("location")),q)
+            );
         }
         if (caracteristicasIds != null && !caracteristicasIds.isEmpty()) {
             for (Long caractId : caracteristicasIds) {

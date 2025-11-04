@@ -2,7 +2,7 @@ package com.EasyStay.EasyStay.Dtos;
 
 import java.time.LocalDate;
 
-public class BookedRangeDTO {
+public class BookingDTO {
     private LocalDate startDate;
     private LocalDate endDate;
 
