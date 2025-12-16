@@ -5,6 +5,7 @@ const UserContext = createContext();
 // eslint-disable-next-line react/prop-types
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const {loading, setLoading} = useState(true);
 
   // Función para decodificar el token JWT
   const decodeToken = (token) => {
@@ -40,7 +41,7 @@ export const UserProvider = ({ children }) => {
         setUser(userData); // Usas los datos del token
       }
     }
-  }, []);
+  }, [setLoading]);
 
   const login = (userData) => {
     setUser(userData); // Almacena los datos del usuario
@@ -53,7 +54,7 @@ export const UserProvider = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, login, logout, decodeToken }}>
+    <UserContext.Provider value={{ user, login, logout, decodeToken, loading }}>
       {children}
     </UserContext.Provider>
   );

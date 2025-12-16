@@ -2,6 +2,7 @@ package com.EasyStay.EasyStay.Services;
 
 
 import com.EasyStay.EasyStay.Dtos.CategoriaCount;
+import com.EasyStay.EasyStay.Dtos.ProductoCardDTO;
 import com.EasyStay.EasyStay.Entities.Producto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -29,6 +30,7 @@ public interface IProductoService {
     List<Producto> findAll();
     boolean existsByName(String name);
 
+    List<ProductoCardDTO> findByIdIn(List<Long> id);
     List<Producto> findByCategory(String categorias);
     List<Producto> findByCategoryIgnoreCase(String categorias);
 

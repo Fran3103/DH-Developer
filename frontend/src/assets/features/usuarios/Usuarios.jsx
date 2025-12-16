@@ -9,21 +9,20 @@ export const Usuarios = () => {
   const [editar, setEditar] = useState(true);
   const [errorRol, setErrorRol] = useState(false);
   const [rol, setRol] = useState({
-    id:"",
-    role:"",
-    name:""
+    id: "",
+    role: "",
+    name: "",
   });
-  
-  const [cambiarRol, setCambiarRol] = useState(false)
+
+  const [cambiarRol, setCambiarRol] = useState(false);
   const [Update, setUpdate] = useState(false);
 
   const handleChange = (e, userId, userName) => {
     const { name, value } = e.target;
     setRol({
-      id:userId,
-      [name]:value,
-      name:userName
-      
+      id: userId,
+      [name]: value,
+      name: userName,
     });
   };
 
@@ -35,33 +34,22 @@ export const Usuarios = () => {
     }
   };
 
-  const cerrar= ()=> {
-    setCambiarRol(false)
+  const cerrar = () => {
+    setCambiarRol(false);
     setUpdate((prev) => !prev);
-    setEditar(true)
+    setEditar(true);
     setRol({
-      id:"",
-      role:"",
-      name:""
-    })
-  }
-
-
- 
- 
-
-   
-
+      id: "",
+      role: "",
+      name: "",
+    });
+  };
 
   const { datos, error, loading } = useFetch("http://localhost:3000/usuarios", [
     Update,
   ]);
 
   const usuariosPorPagina = 8;
-  
-
-
-
 
   // Manejo de carga y errores
   if (loading) return <div>Loading...</div>;
@@ -104,13 +92,18 @@ export const Usuarios = () => {
                     <td className="px-4 py-2 flex justify-center items-center space-x-4 h-full w-full">
                       <select
                         name="role"
-                        className={editar ? "w-2/3 border px-3 py-2 rounded cursor-not-allowed" : "w-2/3 border px-3 py-2 rounded cursor-pointer"}
+                        className={
+                          editar
+                            ? "w-2/3 border px-3 py-2 rounded cursor-not-allowed"
+                            : "w-2/3 border px-3 py-2 rounded cursor-pointer"
+                        }
                         disabled={editar}
-                        onChange={(e)=>handleChange(e, user.id, user.name)}
+                        onChange={(e) => handleChange(e, user.id, user.name)}
                       >
                         <option value="">
                           {user?.role === "USER" ? "Usuario" : "Administrador"}
                         </option>
+                        <option value="">--Selecciona un rol--</option>
                         <option value="USER">Usuario</option>
                         <option value="ADMIN">Administrador</option>
                       </select>
@@ -120,17 +113,13 @@ export const Usuarios = () => {
                         {editar ? (
                           <FaEdit
                             size={20}
-                            onClick={()=> setEditar(!editar)}
+                            onClick={() => setEditar(!editar)}
                             className=" cursor-pointer "
                             color="blue"
                           />
                         ) : (
                           <span className="flex  gap-5 cursor-pointer">
-                            <FaBan
-                              size={20}
-                              color="red"
-                              onClick={cerrar}
-                            />{" "}
+                            <FaBan size={20} color="red" onClick={cerrar} />{" "}
                             <FaCheckCircle
                               size={20}
                               color="green"
@@ -169,21 +158,19 @@ export const Usuarios = () => {
         </div>
       </div>
       {/* Modal de confirmacion de cambio de rol*/}
-      {cambiarRol && <CambiaRol 
-      rol={rol}
-      cerrar={cerrar}
-      confirmar={() => {
-              setEditar(true);
-              setUpdate((prev) => !prev);
-              setCambiarRol(!cambiarRol)
-              
+      {cambiarRol && (
+        <CambiaRol
+          rol={rol}
+          cerrar={cerrar}
+          confirmar={() => {
+            setEditar(true);
+            setUpdate((prev) => !prev);
+            setCambiarRol(!cambiarRol);
+          }}
+        />
+      )}
 
-            }}/>
-            
-            
-            }
-
-            {/* Modal de Advertencia */}
+      {/* Modal de Advertencia */}
       {errorRol && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded shadow-md text-center w-full max-w-sm">

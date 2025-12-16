@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import { getAllProductos } from "../productoService";
 import { useEffect, useState } from "react";
+import HeartButton from "./HeartButton";
 const ProductosHome = () => {
   const [datos, setDatos] = useState([]);
   const [error, setError] = useState(null);
@@ -66,6 +67,7 @@ const ProductosHome = () => {
                     <p className=" absolute right-0 bottom-0 mr-5 mb-2">
                       Desde <span className="font-bold">$ {dato.price}</span>
                     </p>
+                    <span className="absolute   top-0 right-0 " ><HeartButton productId={dato.id} /></span> 
                   </div>
                 </div>
               </Link>

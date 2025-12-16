@@ -7,7 +7,6 @@ export async function getAllProductos(params = {}) {
     // Si no hay parámetros, la query será una cadena vacía
     const response = await fetch(`${API_URL}/filter?${query}`);
 
-
     if (!response.ok) throw new Error("Error al obtener productos");
 
     return response.json();
@@ -17,10 +16,8 @@ export async function getAllProductos(params = {}) {
   }
 }
 
-
 export async function getAllProductosAdmin() {
   try {
- 
     const response = await fetch(`${API_URL}/all`);
 
     if (!response.ok) throw new Error("Error al obtener productos");
@@ -36,6 +33,18 @@ export async function getProductoById(id) {
   const response = await fetch(`${API_URL}/${id}`);
   if (!response.ok) throw new Error("Producto no encontrado");
   return response.json();
+}
+
+// Obtener productos por una lista de IDs
+export async function getProductosByIds(ids = []) {
+  if (!ids.length) return [];
+  const token = localStorage.getItem("token");
+  const params = new URLSearchParams({ ids: ids.join(",") }).toString();
+  const r = await fetch(`/productos/by-ids?${params}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!r.ok) throw new Error(`HTTP ${r.status} getProductosByIds`);
+  return r.json(); 
 }
 
 // Crear un producto
@@ -68,8 +77,8 @@ export async function updateProducto(id, data) {
     error.status = response.status;
     throw error;
   }
-  
-  return ;
+
+  return;
 }
 
 // Eliminar producto
@@ -89,4 +98,24 @@ export async function getProductosByCategoria(categoria) {
   const response = await fetch(`${API_URL}/categoria/${categoria}`);
   if (!response.ok) throw new Error("Error al filtrar por categoría");
   return response.json();
+}
+
+
+// traer productos por listado de ids
+export async function fetchProductosByIds(ids = []) {
+  if (ids.length === 0) return [];
+  const token = localStorage.getItem("token");
+  const idsList = ids.join(",").toString();
+  console.log("IDs para fetchProductosByIds:", idsList);
+  const data = await fetch(`http://localhost:3000/productos/by-ids/${idsList}`, {
+    headers: {
+      Authorization: `Bearer ${token}`, 
+    },
+  });
+  if (!data.ok) {
+    throw new Error("Error al obtener productos por IDs");
+  }
+
+  console.log("Respuesta de fetchProductosByIds:", data);
+  return data.json();
 }

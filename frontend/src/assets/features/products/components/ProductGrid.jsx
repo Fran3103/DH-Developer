@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import HeartButton from "./HeartButton";
 
 export default function ProductsGrid({ items }) {
   if (!items.length) {
@@ -14,7 +15,7 @@ export default function ProductsGrid({ items }) {
           key={item.id}
           className="bg-white rounded-lg overflow-hidden border shadow hover:shadow-lg transition-shadow"
         >
-          <div className="flex flex-col h-full  w-full lg:w-[200px]">
+          <div className="flex flex-col relative h-full  w-full lg:w-[200px]">
             <img
               src={`http://localhost:3000${item.images?.[0].url}`}
               alt={item.name}
@@ -26,6 +27,7 @@ export default function ProductsGrid({ items }) {
               </h3>
               <p className="text-xs text-gray-600">${item.price}</p>
             </div>
+            <span className="absolute   top-0 right-0 " ><HeartButton productId={item.id} /></span> 
           </div>
         </Link>
       ))}

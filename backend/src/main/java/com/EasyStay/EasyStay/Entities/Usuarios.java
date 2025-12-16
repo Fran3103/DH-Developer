@@ -24,7 +24,7 @@ public class Usuarios implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private Long ID;
+    private Long id;
 
     @Getter
     private String name;
