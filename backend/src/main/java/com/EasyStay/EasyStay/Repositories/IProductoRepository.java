@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.List;
 
 @Repository
@@ -15,6 +16,7 @@ public interface IProductoRepository extends JpaRepository<Producto, Long>, JpaS
     boolean existsByName(String name);
     List<Producto> findByCategoriasName(String name);
     List<Producto> findByCategoriasNameIgnoreCase(String name);
+    List<Producto> findByIdIn(Collection<Long> id);
 
     @Query("""
   SELECT c.name  AS category,

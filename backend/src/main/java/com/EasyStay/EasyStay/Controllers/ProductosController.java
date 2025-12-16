@@ -2,6 +2,7 @@ package com.EasyStay.EasyStay.Controllers;
 
 import com.EasyStay.EasyStay.Dtos.BookingDTO;
 import com.EasyStay.EasyStay.Dtos.CategoriaCount;
+import com.EasyStay.EasyStay.Dtos.ProductoCardDTO;
 import com.EasyStay.EasyStay.Entities.Caracteristicas;
 import com.EasyStay.EasyStay.Entities.Categorias;
 import com.EasyStay.EasyStay.Entities.ImagesArray;
@@ -12,6 +13,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.GroupSequence;
+import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -217,7 +219,13 @@ public class ProductosController {
         return ResponseEntity.ok("Se eliminó el Producto con el id: " + id);
     }
 
-
+    @GetMapping("/by-ids/{ids}")
+    public ResponseEntity<List<ProductoCardDTO>> findByIdsIn(@PathVariable List<Long> ids){
+        if (ids == null || ids.isEmpty()){
+            return ResponseEntity.ok(List.of());
+        }
+        return ResponseEntity.ok(productoService.findByIdIn(ids));
+    }
     @GetMapping("/{id}/availability")
     public ResponseEntity<?> getAvailability(@PathVariable Long id) {
 

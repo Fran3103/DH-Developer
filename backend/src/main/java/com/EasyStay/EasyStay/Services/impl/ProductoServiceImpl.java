@@ -2,6 +2,7 @@ package com.EasyStay.EasyStay.Services.impl;
 
 
 import com.EasyStay.EasyStay.Dtos.CategoriaCount;
+import com.EasyStay.EasyStay.Dtos.ProductoCardDTO;
 import com.EasyStay.EasyStay.Entities.Caracteristicas;
 import com.EasyStay.EasyStay.Entities.Categorias;
 import com.EasyStay.EasyStay.Entities.Producto;
@@ -16,6 +17,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -62,6 +65,26 @@ public class ProductoServiceImpl implements IProductoService {
     @Override
     public boolean existsByName(String name) {
         return productoRepository.existsByName(name);
+    }
+
+
+    @Override
+    public List<ProductoCardDTO> findByIdIn(List<Long> id) {
+        // Obtener los productos correspondientes a los IDs proporcionados
+        if (id == null|| id.isEmpty())return List.of();
+        var productos = productoRepository.findByIdIn(id);
+
+        // Crear un mapa para almacenar la posición de cada ID en la lista original
+        var pos = new java.util.HashMap<Long, Integer>();
+        for (int i = 0; i < id.size(); i++) {
+            pos.put(id.get(i), i);
+        }
+
+        // Ordenar los productos según el orden de los IDs en la lista original
+        return  productos.stream()
+                .sorted(java.util.Comparator.comparingInt(p-> pos.getOrDefault(p.getId(), Integer.MAX_VALUE)))
+                .map(ProductoCardDTO::from)
+                .toList();
     }
 
     @Override
