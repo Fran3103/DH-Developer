@@ -5,6 +5,7 @@ import { iconMap } from "../../../utils/iconMap";
 import "../../../styles/galeria.css";
 import Galeria from "../../../Components/Galeria";
 import AvailabilityCalendar from "../../reservas/Componentes/AvailabilityCalendar";
+import HeartButton from "./HeartButton";
 const Detalle = () => {
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
@@ -66,9 +67,10 @@ const Detalle = () => {
       </div>
       <div className="m-auto max-w-[1240px] mt-2 p-4">
         <div>
-          <AvailabilityCalendar Producto_id={id} />
+          <AvailabilityCalendar Producto_id={producto.id} />
         </div>
         <div className=" max-w-96 m-auto md:max-w-[740px] lg:max-w-none relative">
+          <HeartButton productId={producto.id} />
           <div className="galeria ">
             {galeria.map((imagen, index) => {
               return (
@@ -92,6 +94,7 @@ const Detalle = () => {
           </p>
         </div>
 
+          
         <div className="mt-20">
           <h2 className="text-2xl text-azul font-semibold">
             {producto.location}

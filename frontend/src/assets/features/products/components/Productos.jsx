@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Producto from "./Producto";
 import {  getAllProductosAdmin } from "../productoService";
+import { addFavorite } from "./favoritosServices";
 const Productos = () => {
   const [datos, setDatos] = useState(null);
   const [error, setError] = useState(null);
@@ -9,22 +10,26 @@ const Productos = () => {
 
   const productosPorPagina = 10;
 
-
-  useEffect(()=> {
-    
+  useEffect(() => {
     const fetchDatos = async () => {
-      try{
-        const data = await getAllProductosAdmin()
+      try {
+        const data = await getAllProductosAdmin();
         setDatos(data);
-      }catch (err) {
+      } catch (err) {
         setError(err.message);
-      } 
       }
-      fetchDatos()
-    },[])
+    };
+    fetchDatos();
+  }, []);
 
-
-    
+  const agregarFavorito = async (productoId) => {
+    // Lógica para agregar el producto a favoritos
+    try {
+      await addFavorite(productoId);
+    console.log("Producto agregado a favoritos:", productoId);
+  }catch (error) {
+      console.error("Error al agregar a favoritos:", error);
+    }}
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -61,6 +66,7 @@ const Productos = () => {
               quality={dato.quality}
               description={dato.description}
               images={dato.images}
+              agregarFavorito={agregarFavorito}
             />
           );
         })}

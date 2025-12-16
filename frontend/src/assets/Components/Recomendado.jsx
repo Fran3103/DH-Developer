@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import HeartButton from '../features/products/components/HeartButton';
 
 
 // eslint-disable-next-line react/prop-types
@@ -16,7 +17,7 @@ const Recomendado = ({id, name, location, rating, quality, price, images}) => {
             
 
           <Link key={id} to={`/producto/${id}`}>
-                <div className='w-72 h-72 rounded-lg shadow-lg hover:shadow-xl xs:w-44 sm:w-40 md:w-48 lg:w-56'>
+                <div className='w-72 h-72 relative rounded-lg shadow-lg hover:shadow-xl xs:w-44 sm:w-40 md:w-48 lg:w-56'>
                   <div>
                     <img src={imageUrl} alt={name} className='rounded-t-lg w-full h-40' />
                   </div>
@@ -28,6 +29,7 @@ const Recomendado = ({id, name, location, rating, quality, price, images}) => {
                     </p>
                   </div>
                   <p className='text-right mr-5 mb-2'>Desde <span className='font-bold'>$ {price}</span></p>
+                  <span className="absolute   top-0 right-0 " ><HeartButton productId={id} /></span> 
                 </div>
               </Link>
         </div>

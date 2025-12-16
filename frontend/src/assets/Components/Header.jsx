@@ -130,12 +130,28 @@ const Header = () => {
               </div>
             </>
           ) : (
-            <button
-              onClick={toggleMenu}
-              className="md:hidden w-0 mr-10 text-white hover:text-gray-400 cursor-pointer "
-            >
-              <FaBars className="m-auto text-xl" />
-            </button>
+            <>
+              <button
+                onClick={toggleMenu}
+                className="md:hidden w-0 mr-10 text-white hover:text-gray-400 cursor-pointer "
+              >
+                <FaBars className="m-auto text-xl" />
+              </button>
+              <div className="hidden md:flex gap-4">
+                <button
+                  onClick={() => setMostrarFormulario(true)}
+                  className="button"
+                >
+                  Crear Cuenta
+                </button>
+                <button
+                  onClick={() => setIniciarSesion(true)}
+                  className="button"
+                >
+                  Iniciar Sesion
+                </button>
+              </div>
+            </>
           )}
         </div>
         <div
