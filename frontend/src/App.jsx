@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./assets/Components/Header";
-
 import Home from "./assets/Page/Home";
 import Footer from "./assets/Components/Footer";
 import Detalle from "./assets/features/products/components/Detalle";
@@ -15,32 +14,40 @@ import { AdministraCaracteristicas } from "./assets/features/caracteristicas/adm
 import VerificarCuenta from "./assets/Page/VarificacionCuenta";
 import ProductListPage from "./assets/features/products/components/ProductListPage";
 import { AdministraCategoria } from "./assets/features/categorias/admin/AdministraCategoria";
-
+import FavoritesProvider from "./assets/Context/FavoritesContext";
 
 function App() {
   return (
     <UserProvider>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/:producto/:id" element={<Detalle />} />
-            <Route path="/productos/" element={<Productos />} />
-            <Route path="/productos/filter" element={<ProductListPage />} />
-            <Route path="/perfil" element={<Perfil />} />
-            <Route path="/verificar/*" element={<VerificarCuenta />} />
-            <Route path="/admin/*" element={<Admin />} >
-              <Route path="productos" element={<ProductosAdmin />}/>
-              <Route index element={<ProductosAdmin />}/>
-              <Route path="usuarios" element={<Usuarios />}/>
-              <Route path="administrar caracteristicas" element={<AdministraCaracteristicas />}/>
-              <Route path="agregar categorias" element={<AdministraCategoria />}/>
-            </Route>
-          </Routes>
+      <FavoritesProvider>
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/:producto/:id" element={<Detalle />} />
+              <Route path="/productos/" element={<Productos />} />
+              <Route path="/productos/filter" element={<ProductListPage />} />
+              <Route path="/perfil" element={<Perfil />} />
+              <Route path="/verificar/*" element={<VerificarCuenta />} />
+              <Route path="/admin/*" element={<Admin />}>
+                <Route path="productos" element={<ProductosAdmin />} />
+                <Route index element={<ProductosAdmin />} />
+                <Route path="usuarios" element={<Usuarios />} />
+                <Route
+                  path="administrar caracteristicas"
+                  element={<AdministraCaracteristicas />}
+                />
+                <Route
+                  path="agregar categorias"
+                  element={<AdministraCategoria />}
+                />
+              </Route>
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </FavoritesProvider>
     </UserProvider>
   );
 }
